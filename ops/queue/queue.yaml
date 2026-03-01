@@ -1,0 +1,18 @@
+---
+# Processing Queue
+# phase_order: extract -> enrich -> integrate -> archive
+phase_order:
+  - extract
+  - enrich
+  - integrate
+  - archive
+---
+
+tasks:
+  - id: 2026-03-01-making-system-operational-and-creating-agents
+    type: extract
+    status: pending
+    source: "ops/queue/archive/2026-03-01-making-system-operational-and-creating-agents/2026-03-01-making-system-operational-and-creating-agents.md"
+    file: "2026-03-01-making-system-operational-and-creating-agents.md"
+    created: "2026-03-01T00:00:00Z"
+    next_claim_start: 1
