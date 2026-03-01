@@ -1,18 +1,215 @@
 ---
 # Processing Queue
-# phase_order: extract -> enrich -> integrate -> archive
+# phase_order defines phase progression per task type
 phase_order:
-  - extract
-  - enrich
-  - integrate
-  - archive
+  claim: [create, reflect, reweave, verify]
+  enrichment: [enrich, reflect, reweave, verify]
 ---
 
 tasks:
   - id: 2026-03-01-making-system-operational-and-creating-agents
     type: extract
-    status: pending
+    status: done
     source: "ops/queue/archive/2026-03-01-making-system-operational-and-creating-agents/2026-03-01-making-system-operational-and-creating-agents.md"
     file: "2026-03-01-making-system-operational-and-creating-agents.md"
     created: "2026-03-01T00:00:00Z"
     next_claim_start: 1
+    completed: "2026-03-01T17:30:00Z"
+
+  - id: claim-001
+    type: claim
+    status: pending
+    target: "orchestrator-first bootstrapping reduces multi-agent coordination failures"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-001.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-002
+    type: claim
+    status: pending
+    target: "optimal multi-agent team size is 3 to 7 specialized agents"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-002.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-003
+    type: claim
+    status: pending
+    target: "the minimal viable agent set for software-building is requirements, code generation, test generation, and code review"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-003.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-004
+    type: claim
+    status: pending
+    target: "spec-centric architecture is the most reliable pattern for agents building systems"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-004.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-005
+    type: claim
+    status: pending
+    target: "CrewAI aligns best with catalog-driven SDLC agent architectures"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-005.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-006
+    type: claim
+    status: pending
+    target: "workflows are preferable to agents for deterministic SDLC phases"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-006.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-007
+    type: claim
+    status: pending
+    target: "phased rollout prevents coordination chaos when building multi-agent systems"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-007.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-008
+    type: claim
+    status: pending
+    target: "agentic SDLC systems require explicit human supervision at high-stakes handoff points"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-008.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-009
+    type: claim
+    status: pending
+    target: "base model quality matters more than framework choice for agent capability"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-009.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-010
+    type: claim
+    status: pending
+    target: "agent profile framework field should capture both orchestration framework and base model"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-010.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-011
+    type: claim
+    status: pending
+    target: "agent profiles must include escalation conditions as a required design field"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-011.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-012
+    type: claim
+    status: pending
+    target: "requirements agents must produce a structured spec artifact not just prose notes"
+    classification: closed
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-012.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-013
+    type: claim
+    status: pending
+    target: "what does a minimum viable Requirements Analyst Agent prompt look like and how does it produce a structured spec"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-013.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-014
+    type: claim
+    status: pending
+    target: "how does CrewAI handle agent-to-agent handoff and what does its interaction API look like"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-014.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-015
+    type: claim
+    status: pending
+    target: "what are the specific escalation patterns used in production agentic SDLC systems"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-015.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-016
+    type: claim
+    status: pending
+    target: "can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-016.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-017
+    type: claim
+    status: pending
+    target: "what metrics distinguish a well-functioning orchestrator from a coordination bottleneck"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-017.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
+
+  - id: claim-018
+    type: claim
+    status: pending
+    target: "when should LangGraph be chosen over CrewAI for an SDLC agent team"
+    classification: open
+    batch: 2026-03-01-making-system-operational-and-creating-agents
+    file: "2026-03-01-making-system-operational-and-creating-agents-018.md"
+    created: "2026-03-01T17:30:00Z"
+    current_phase: create
+    completed_phases: []
