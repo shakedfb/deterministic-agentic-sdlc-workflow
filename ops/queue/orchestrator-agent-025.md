@@ -26,7 +26,8 @@ OPEN — hypothesis, not yet validated
 - [[spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems]]
 
 ## Create
-(filled by create phase)
+Created: agents/intelligent-context-windowing-is-needed-when-spec-artifacts-exceed-the-context-window.md
+Note title: "intelligent context windowing is needed when spec artifacts exceed the context window"
 
 ## Reflect
 (filled by reflect phase)
