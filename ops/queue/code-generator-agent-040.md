@@ -26,13 +26,16 @@ OPEN — v2 design hypothesis; requires validation against test generator output
 - [[spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems]] (extends: spec-centric architecture ensures behavioral alignment; test-awareness extends that alignment to structural testability conventions)
 
 ## Create
-(filled by create phase)
+Created: agents/code-generation-agents-without-test-awareness-produce-output-that-increases-iteration-cycles-with-downstream-test-generation-agents.md
 
 ## Reflect
-(filled by reflect phase)
+Connections mapped (4): minimal-viable-agent-set, spec-centric-architecture, project_config claim (041), hard-iteration-limits
+No reweave targets: note is new and open hypothesis; no existing notes yet reference this gap
+Articulation test: PASS
 
 ## Reweave
-(filled by reweave phase)
+No reweave edits needed (new open hypothesis, no existing notes reference this gap yet)
 
 ## Verify
-(filled by verify phase)
+**Verified:** 2026-03-02T00:00:00Z
+Overall: PASS (open hypothesis — falsification criteria documented)

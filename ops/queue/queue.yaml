@@ -499,14 +499,15 @@ tasks:
 
   - id: claim-040
     type: claim
-    status: pending
+    status: done
     target: "code generation agents without test-awareness produce output that increases iteration cycles with downstream test generation agents"
     classification: open
     batch: code-generator-agent
     file: "code-generator-agent-040.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: create
-    completed_phases: []
+    current_phase: null
+    completed_phases: [create, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-041
     type: claim
