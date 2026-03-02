@@ -20,7 +20,9 @@ Semantic neighbor: null — no schema design note exists yet.
 ---
 
 ## Create
-(to be filled by create phase)
+Created: agents/agent-profile-framework-field-should-capture-both-orchestration-framework-and-base-model.md
+Title: agent profile framework field should capture both orchestration framework and base model
+Status: complete
 
 ## /map
 (to be filled by /map phase)
