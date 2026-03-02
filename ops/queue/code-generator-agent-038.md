@@ -27,13 +27,17 @@ CLOSED — asserted as required design constraint in Code Generator Agent v1; co
 - [[spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems]] (requires: self-validation only works because acceptance criteria live in the spec; without spec, no criteria to validate against)
 
 ## Create
-(filled by create phase)
+Created: agents/pre-handoff-self-validation-against-acceptance-criteria-is-a-required-quality-gate-for-code-generation-agents.md
 
 ## Reflect
-(filled by reflect phase)
+Connections mapped (6): spec-centric-architecture, specific-escalation-patterns, agentic-sdlc-supervision, implementation-report, hard-iteration-limits, orchestrator-role
+Backlinks added to: agentic-sdlc-systems (supervision surface), spec-centric-architecture (prerequisite for self-check)
+Articulation test: PASS
 
 ## Reweave
-(filled by reweave phase)
+Updated agentic-sdlc-systems-require-explicit-human-supervision-at-high-stakes-handoff-points.md
+Updated spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems.md
 
 ## Verify
-(filled by verify phase)
+**Verified:** 2026-03-02T00:00:00Z
+Overall: PASS

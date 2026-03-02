@@ -475,14 +475,15 @@ tasks:
 
   - id: claim-038
     type: claim
-    status: pending
+    status: done
     target: "pre-handoff self-validation against acceptance criteria is a required quality gate for code generation agents"
     classification: closed
     batch: code-generator-agent
     file: "code-generator-agent-038.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: create
-    completed_phases: []
+    current_phase: null
+    completed_phases: [create, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-039
     type: claim

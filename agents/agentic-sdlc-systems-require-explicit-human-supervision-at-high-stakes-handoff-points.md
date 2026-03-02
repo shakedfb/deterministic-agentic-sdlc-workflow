@@ -37,6 +37,7 @@ Finally, supervision that cannot be measured cannot be calibrated. The [[observa
 - [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] — hard limits are the enforcement mechanism for bounded agent authority: they define the precise point at which autonomous iteration must stop and human judgment must take over, making the supervision principle structurally enforced rather than convention-dependent
 - [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]] — escalation rate (the frequency of human supervision triggers across pipeline runs) is the primary behavioral signal for verifying that supervision thresholds are correctly calibrated; the observability layer is the prerequisite for measuring whether the supervision design is working
 - [[requirements-analyst-agent]] — the first concrete implementation of this supervision principle in the vault: its explicit escalation conditions and the 20% escalation rate metric provide an observable test of whether the agent's supervision thresholds are correctly calibrated in practice
+- [[pre-handoff-self-validation-against-acceptance-criteria-is-a-required-quality-gate-for-code-generation-agents]] — the self-check and explicit failure reporting mechanism is the code generator's contribution to the supervision surface: catching quality issues before they propagate, then surfacing failures via HOTL governance rather than shipping broken code silently
 
 **Topics:**
 - [[agent-registry]]

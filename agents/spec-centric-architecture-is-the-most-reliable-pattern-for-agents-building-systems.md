@@ -34,6 +34,7 @@ The corollary: large specs create a context window tension (see [[lossless conte
 **Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (lines 37-41); enriched from [[orchestrator-agent]]
 
 **Relevant Notes:**
+- [[pre-handoff-self-validation-against-acceptance-criteria-is-a-required-quality-gate-for-code-generation-agents]] — the code generator's self-validation step is only possible because acceptance criteria exist in the spec; spec-centric architecture is the prerequisite that makes this quality gate functional
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the requirements agent in the minimal set must produce a structured spec for downstream agents to consume; spec-centric architecture defines the output contract for that agent
 - [[requirements agents must produce a structured spec artifact not just prose notes]] — the operational consequence of this architectural principle applied to the Requirements Analyst Agent profile
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator coordinates against the spec as shared state; without a spec, the orchestrator has no consistent ground truth to route work from
