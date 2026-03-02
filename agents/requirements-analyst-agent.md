@@ -1,6 +1,7 @@
 ---
 description: Translates raw user intent and stakeholder input into a structured three-file spec artifact (requirements.md, design.md, tasks.md) that downstream code generation, test generation, and code review agents consume without ambiguity.
 sdlc_phase: requirements
+topics: ["[[agent-registry]]", "[[requirements-phase]]"]
 version: v1
 responsibilities:
   - Elicit requirements from user-provided intent via structured questioning
@@ -141,7 +142,7 @@ The minimum viable prompt has three components:
 
 The three-file structure is grounded in two converging industry patterns: AWS Kiro's agentic IDE (which pioneered requirements.md/design.md/tasks.md as the canonical spec trio), and GitHub Spec Kit's Specify → Plan → Tasks → Implement pipeline. Both independently arrived at the same decomposition: functional intent (requirements), structural intent (design), and execution intent (tasks). This convergence is evidence that the decomposition is load-bearing, not aesthetic. The vault's adoption of this format is documented in [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]].
 
-**2. Explicit escalation conditions.** The prompt defines four specific escalation triggers rather than vague "ask when confused" instructions. This matters because LLMs default to confident completion — without explicit conditions, a requirements agent will invent architecture decisions, assume auth patterns, and produce specs that look complete but contain unresolved structural choices. The four conditions target the failure modes that cause the most downstream rework: unbounded solution spaces, implied security constraints, undefined system overlaps, and irreversible data model decisions. This design implements [[agent profiles must include escalation conditions as a required design field]] and draws on the escalation trigger taxonomy from [[what are the specific escalation patterns used in production agentic SDLC systems]].
+**2. Explicit escalation conditions.** The prompt defines four specific escalation triggers rather than vague "ask when confused" instructions. This matters because LLMs default to confident completion — without explicit conditions, a requirements agent will invent architecture decisions, assume auth patterns, and produce specs that look complete but contain unresolved structural choices. The four conditions target the failure modes that cause the most downstream rework: unbounded solution spaces, implied security constraints, undefined system overlaps, and irreversible data model decisions. This design implements [[agent profiles must include escalation conditions as a required design field]] and draws on the escalation trigger taxonomy from [[specific-escalation-patterns-in-production-agentic-sdlc-systems]].
 
 The escalation rate metric (target: below 20%) provides a calibration signal per [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]]. If escalation rate is high, the prompt is too conservative. If it is near zero, the agent is almost certainly making undocumented assumptions.
 

@@ -88,7 +88,7 @@ This question was raised because [[requirements agents must produce a structured
 - [[requirements-analyst-agent]] — the agent profile that implements this decision; its output format (three-file artifact) is now confirmed as canonical and Spec Kit-compatible
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — the architectural claim this note operationalizes: Spec Kit IS the industry-validated spec-centric pattern, and the vault's adoption decision connects the abstract principle to a specific format
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the four-agent set whose input/output contracts depend on the spec format being agreed upon; this note closes the prerequisite
-- [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — the spec artifact (as TaskOutput with Pydantic schema) is the data structure that passes between agents at the requirements → code generation handoff
+- [[crewai-agent-to-agent-handoff-and-interaction-api]] — the spec artifact (as TaskOutput with Pydantic schema) is the data structure that passes between agents at the requirements → code generation handoff
 
 **Topics:**
 - [[agent-registry]]

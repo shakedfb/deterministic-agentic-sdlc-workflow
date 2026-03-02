@@ -27,7 +27,7 @@ The implication for this vault is concrete: the Orchestrator Agent profile shoul
 - [[optimal multi-agent team size is 3 to 7 specialized agents]] — team sizing research that confirms the orchestrator occupies one of the core slots in any viable team
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — the phased rollout pattern depends on the orchestrator being stable before specialists are added
 - [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — once the orchestrator is built first, these four signal categories are how you verify it is functioning as a coordinator rather than a bottleneck
-- [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — the orchestrator-first principle maps directly to CrewAI's hierarchical process: the orchestrator is the manager agent that routes work to specialists
+- [[crewai-agent-to-agent-handoff-and-interaction-api]] — the orchestrator-first principle maps directly to CrewAI's hierarchical process: the orchestrator is the manager agent that routes work to specialists
 
 **Topics:**
 - [[agent-registry]]

@@ -104,7 +104,7 @@ The choice between sequential and hierarchical mode is a design decision that sh
 - [[CrewAI aligns best with catalog-driven SDLC agent architectures]] — the framework recommendation that made this question necessary; understanding the handoff API validates whether CrewAI's interaction model matches the vault's wiki-link interaction graph
 - [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — task guardrails and the manager agent's validation loop are the CrewAI-native implementation of human-in-the-loop at handoff boundaries
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — the structured spec artifact produced by requirements agents becomes `TaskOutput` with a Pydantic schema, making the spec machine-parseable at the handoff boundary
-- [[what are the specific escalation patterns used in production agentic SDLC systems]] — task guardrails map to confidence threshold escalation; the hierarchical manager agent is the CrewAI implementation surface for inter-agent conflict escalation; the escalation taxonomy from that note maps to specific CrewAI API primitives
+- [[specific-escalation-patterns-in-production-agentic-sdlc-systems]] — task guardrails map to confidence threshold escalation; the hierarchical manager agent is the CrewAI implementation surface for inter-agent conflict escalation; the escalation taxonomy from that note maps to specific CrewAI API primitives
 
 **Topics:**
 - [[agent-registry]]
