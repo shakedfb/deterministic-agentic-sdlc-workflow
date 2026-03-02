@@ -451,3 +451,11 @@ tasks:
     current_phase: null
     completed_phases: [create, reflect, reweave, verify]
     completed: "2026-03-02T00:00:00Z"
+
+  - id: code-generator-agent
+    type: extract
+    status: pending
+    source: "ops/queue/archive/2026-03-02-code-generator-agent/code-generator-agent.md"
+    file: "code-generator-agent.md"
+    created: "2026-03-02T00:00:00Z"
+    next_claim_start: 37
