@@ -26,7 +26,8 @@ OPEN — explicit hypothesis in source, marked as "to validate"
 - [[specific-escalation-patterns-in-production-agentic-sdlc-systems]]
 
 ## Create
-(filled by create phase)
+Created: agents/the-four-phase-build-loop-calibration-hypothesis-for-iteration-limits.md
+Note title: "the four-phase build loop calibration hypothesis for iteration limits"
 
 ## Reflect
 (filled by reflect phase)
