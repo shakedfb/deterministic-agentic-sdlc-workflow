@@ -25,7 +25,8 @@ OPEN — implementation direction, not yet built
 - [[what-metrics-distinguish-a-well-functioning-orchestrator-from-a-coordination-bottleneck]]
 
 ## Create
-(filled by create phase)
+Created: agents/observability-layer-with-trace-level-instrumentation-is-required-before-orchestrator-metrics-become-measurable.md
+Note title: "observability layer with trace-level instrumentation is required before orchestrator metrics become measurable"
 
 ## Reflect
 (filled by reflect phase)
