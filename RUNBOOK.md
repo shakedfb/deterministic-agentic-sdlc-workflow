@@ -1,5 +1,81 @@
 # Operational Runbook
 
+## Local Development Setup
+
+### LLM Provider Configuration
+
+The system supports four LLM providers. Set `LLM_PROVIDER` in `.env`:
+
+| Provider | `LLM_PROVIDER` | API Key Required | Extra Install |
+|----------|----------------|-----------------|---------------|
+| OpenAI | `openai` | Yes (`LLM_API_KEY` or `OPENAI_API_KEY`) | — (included) |
+| Anthropic | `anthropic` | Yes (`LLM_API_KEY` or `ANTHROPIC_API_KEY`) | `pip install -e ".[anthropic]"` |
+| Ollama | `ollama` | No | `pip install -e ".[ollama]"` + `ollama pull <model>` |
+| OpenAI-compatible (LM Studio, vLLM, etc.) | `openai-compatible` | Varies | `LLM_BASE_URL` required |
+
+Use `pip install -e ".[all-providers,dev]"` to install everything.
+
+### Service Fallback Behavior
+
+Only Temporal is required to run workflows. Everything else degrades gracefully:
+
+| Service | Required? | Fallback When Absent |
+|---------|-----------|---------------------|
+| Temporal | **Yes** | No fallback — workflow orchestration needs it |
+| PostgreSQL | No | LangGraph checkpoints use in-memory `MemorySaver` |
+| Redis | No | State store and generation cache use in-memory `dict` |
+| Pinecone | No | Vector search returns empty results; stores in-memory list |
+| E2B | No | Test execution simulated (all tests "pass") |
+| LangSmith | No | Tracing disabled; structlog still logs locally |
+| Jira | No | Use `local_trigger.py` with synthetic `LOCAL-XXXXXX` ticket IDs |
+| Slack | No | HITL notifications print to console |
+| Semgrep | No | SAST step skipped in review |
+| Terraform CLI | No | Plan/apply simulated |
+
+### Minimal Run (Ollama, No External Services)
+
+```bash
+# .env — only two lines needed
+LLM_PROVIDER=ollama
+LLM_MODEL=llama3.1
+
+# Start just Temporal (Redis/Postgres optional but included)
+docker compose up -d
+
+# Worker (terminal 1)
+python -m orchestrator.worker
+
+# Trigger (terminal 2)
+python -m orchestrator.local_trigger "Build a REST API that returns user profiles by ID"
+
+# Monitor at http://localhost:8080
+```
+
+### HITL Approval in Local Mode
+
+Without Slack, HITL requests print to the console. Send approval signals via Temporal CLI:
+
+```bash
+# Approve a deployment
+temporal workflow signal \
+  --workflow-id sdlc-LOCAL-ABC123 \
+  --name hitl_response \
+  --input '{"action":"approve","actor":"local-dev"}'
+
+# Reject
+temporal workflow signal \
+  --workflow-id sdlc-LOCAL-ABC123 \
+  --name hitl_response \
+  --input '{"action":"reject","actor":"local-dev"}'
+```
+
+### Running Tests
+
+```bash
+pytest tests/unit/ -v          # Unit tests (no infra needed)
+pytest tests/ -v               # All tests
+```
+
 ## Stuck Workflows
 
 ### Symptoms
