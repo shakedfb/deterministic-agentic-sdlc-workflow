@@ -9,7 +9,14 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
-    # LLM
+    # LLM provider
+    llm_provider: str = "openai"  # openai | anthropic | ollama | openai-compatible
+    llm_model: str = ""  # empty = provider default
+    llm_base_url: str = ""  # required for ollama and openai-compatible
+    llm_api_key: str = ""  # generic key, falls back to provider-specific env vars
+    llm_temperature: float = 0.0
+
+    # Provider-specific keys (used as fallbacks when llm_api_key is empty)
     openai_api_key: str = ""
     openai_model: str = "gpt-4o"
     anthropic_api_key: str = ""
