@@ -24,6 +24,7 @@ The dependency runs in both directions. The sequential pipeline architecture des
 **Source:** [[orchestrator-agent]]
 
 **Relevant Notes:**
+- [[the-implementation-report-is-the-structured-handoff-artifact-that-enables-orchestrator-routing-decisions-after-code-generation]] — the IMPLEMENTATION REPORT is the specialist-side half of lossless context transfer at the development phase boundary: the code generator packages its outputs in structured, parseable form so the Orchestrator can assemble the next handoff package without interpretation
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — the spec artifact is the first component in the context package; lossless transfer operationalizes spec-centric architecture at the handoff level, not just the design level
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator-first principle exists in part because context assembly is a non-trivial function; the orchestrator must be designed before specialists can receive properly assembled context
 - [[token cost of lossless context transfer is justified by the failure cost of context stripping]] — the economic argument that makes completeness the rational choice even when it increases per-handoff token cost

@@ -487,14 +487,15 @@ tasks:
 
   - id: claim-039
     type: claim
-    status: pending
+    status: done
     target: "the IMPLEMENTATION REPORT is the structured handoff artifact that enables orchestrator routing decisions after code generation"
     classification: closed
     batch: code-generator-agent
     file: "code-generator-agent-039.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: create
-    completed_phases: []
+    current_phase: null
+    completed_phases: [create, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-040
     type: claim
