@@ -218,10 +218,28 @@ async def deployment_activity(
 async def notify_hitl_activity(
     ticket_id: str, phase: str, summary: str, context: str
 ) -> None:
-    """Send a HITL notification via Slack."""
-    from mcp_servers.slack.server import _slack
+    """Send a HITL notification via Slack. Falls back to console when unconfigured."""
+    from agents.settings import settings
 
     activity.heartbeat(f"Sending HITL notification for {ticket_id}")
+
+    if not settings.slack_bot_token:
+        await logger.ainfo(
+            "hitl_notification_console",
+            ticket_id=ticket_id,
+            phase=phase,
+            summary=summary,
+        )
+        print(f"\n{'='*60}")
+        print(f"HITL REQUIRED — {phase.upper()}")
+        print(f"Ticket: {ticket_id}")
+        print(f"Summary: {summary}")
+        print(f"Context: {context[:500]}")
+        print(f"{'='*60}\n")
+        return
+
+    from mcp_servers.slack.server import _slack
+
     await _slack.send_hitl_request(
         ticket_id=ticket_id,
         phase=phase,
@@ -232,10 +250,22 @@ async def notify_hitl_activity(
 
 @activity.defn
 async def update_jira_activity(ticket_id: str, status: str, comment: str) -> None:
-    """Update Jira ticket status and add a comment."""
-    from mcp_servers.jira.server import _jira
+    """Update Jira ticket status and add a comment. No-op when Jira is unconfigured."""
+    from agents.settings import settings
 
     activity.heartbeat(f"Updating Jira for {ticket_id}")
+
+    if not settings.jira_base_url:
+        await logger.ainfo(
+            "jira_update_skipped",
+            ticket_id=ticket_id,
+            status=status,
+            reason="jira not configured",
+        )
+        return
+
+    from mcp_servers.jira.server import _jira
+
     try:
         await _jira.update_status(ticket_id, status)
     except Exception as exc:
