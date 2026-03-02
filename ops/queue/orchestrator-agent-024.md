@@ -26,7 +26,8 @@ OPEN — design direction, not yet validated
 - [[sequential pipeline claim (orchestrator-agent-020)]]
 
 ## Create
-(filled by create phase)
+Created: agents/parallel-task-execution-requires-dependency-graph-analysis-and-is-a-v2-concern-for-sdlc-pipelines.md
+Note title: "parallel task execution requires dependency graph analysis and is a v2 concern for SDLC pipelines"
 
 ## Reflect
 (filled by reflect phase)
