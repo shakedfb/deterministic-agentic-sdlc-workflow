@@ -20,7 +20,23 @@ Semantic neighbor: null — connects to claim 005 (CrewAI recommendation) and cl
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/crewai-agent-to-agent-handoff-and-interaction-api.md`
+
+Note title: how does CrewAI handle agent-to-agent handoff and what does its interaction API look like
+Path: agents/crewai-agent-to-agent-handoff-and-interaction-api.md
+Word count: ~750 words (body)
+Status: complete
+
+Key content:
+- Documents two primary handoff mechanisms: sequential task chaining via the `context` parameter (data-driven) and hierarchical delegation via a manager agent (role-driven)
+- Explains TaskOutput structure (raw, pydantic, json_dict) and how output_pydantic enforces schema contracts at handoff boundaries
+- Documents task guardrails as a validation/transformation layer at handoff points
+- Covers hierarchical process API: allow_delegation flag, manager_agent parameter, allowed_agents for controlled delegation, Process.hierarchical vs Process.sequential
+- Documents A2A protocol for remote agent delegation with A2AClientConfig
+- Maps vault wiki-link interaction patterns to CrewAI task context dependencies
+- Recommends sequential mode with explicit context dependencies as the lower-risk starting point for SDLC pipelines with known phase boundaries
+- Connects to: [[CrewAI aligns best with catalog-driven SDLC agent architectures]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[spec-centric architecture is the most reliable pattern for agents building systems]]
 
 ## /map
 (to be filled by /map phase)
