@@ -27,7 +27,8 @@ CLOSED — asserted as design principle, backed by CrewAI recommendation
 - [[phased-rollout-prevents-coordination-chaos-when-building-multi-agent-systems]]
 
 ## Create
-(filled by create phase)
+Created: agents/sequential-pipeline-with-backward-iteration-loops-is-the-lower-risk-v1-architecture-for-multi-agent-build-loops.md
+Note title: "sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops"
 
 ## Reflect
 (filled by reflect phase)
