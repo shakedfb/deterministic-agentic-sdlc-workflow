@@ -7,6 +7,14 @@ phase_order:
 ---
 
 tasks:
+  - id: orchestrator-agent
+    type: extract
+    status: pending
+    source: "ops/queue/archive/2026-03-02-orchestrator-agent/orchestrator-agent.md"
+    file: "orchestrator-agent.md"
+    created: "2026-03-02T00:00:00Z"
+    next_claim_start: 19
+
   - id: 2026-03-01-making-system-operational-and-creating-agents
     type: extract
     status: archived
