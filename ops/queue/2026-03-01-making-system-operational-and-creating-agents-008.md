@@ -20,7 +20,21 @@ Semantic neighbor: null — no escalation design note exists.
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/agentic-sdlc-systems-require-explicit-human-supervision-at-high-stakes-handoff-points.md`
+
+Note title: agentic SDLC systems require explicit human supervision at high-stakes handoff points
+Path: agents/agentic-sdlc-systems-require-explicit-human-supervision-at-high-stakes-handoff-points.md
+Word count: ~380 words (body)
+Status: complete
+
+Key content:
+- Frames human supervision as a structural design constraint, not a limitation — agents are human-supervised automation, not fully autonomous systems
+- Explains the compounding failure mode of unsupervised agents across phase handoffs
+- Argues escalation conditions are first-class design requirements, not edge cases
+- Provides phase-specific escalation examples (requirements scope ambiguity, deployment production changes, security boundary modifications)
+- Connects to [[phased rollout prevents coordination chaos when building multi-agent systems]] — Phase 1 manual review is deliberate supervision, not a temporary shortcut
+- Connects to [[agent profiles must include escalation conditions as a required design field]] — the operational consequence of this structural principle
 
 ## /map
 (to be filled by /map phase)
