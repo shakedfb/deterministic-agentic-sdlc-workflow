@@ -26,7 +26,8 @@ CLOSED — asserted as settled design principle
 - [[the-minimal-viable-agent-set-for-software-building-is-requirements-code-generation-test-generation-and-code-review]]
 
 ## Create
-(filled by create phase)
+Created: agents/the-orchestrator-agents-role-is-routing-and-validation-not-content-generation.md
+Note title: "the orchestrator agent's role is routing and validation not content generation"
 
 ## Reflect
 (filled by reflect phase)
