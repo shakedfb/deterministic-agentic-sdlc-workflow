@@ -22,6 +22,7 @@ The constraint also clarifies what to defer. Deployment Orchestrator Agent, Oper
 **Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (lines 27-35)
 
 **Relevant Notes:**
+- [[code-generator-agent]] — the Code Generator Agent is the second agent designed in the minimal viable set; its single-task-per-invocation design, self-validation protocol, and IMPLEMENTATION REPORT output confirm that each specialist in the minimal set can be designed with a complete, testable spec
 - [[optimal multi-agent team size is 3 to 7 specialized agents]] — a 4-agent specialist set plus orchestrator lands at 5 agents, within the optimal 3–7 range
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the prerequisite anchor; the minimal viable specialist set is built on top of it
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — the requirements agent in this set must produce a structured spec artifact to enable the downstream code generation agent

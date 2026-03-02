@@ -454,7 +454,7 @@ tasks:
 
   - id: code-generator-agent
     type: extract
-    status: done
+    status: archived
     source: "ops/queue/archive/2026-03-02-code-generator-agent/code-generator-agent.md"
     file: "code-generator-agent.md"
     created: "2026-03-02T00:00:00Z"
@@ -463,7 +463,7 @@ tasks:
 
   - id: claim-037
     type: claim
-    status: done
+    status: archived
     target: "single-task-per-invocation is the correct scope discipline for reliable code generation agents"
     classification: closed
     batch: code-generator-agent
@@ -475,7 +475,7 @@ tasks:
 
   - id: claim-038
     type: claim
-    status: done
+    status: archived
     target: "pre-handoff self-validation against acceptance criteria is a required quality gate for code generation agents"
     classification: closed
     batch: code-generator-agent
@@ -487,7 +487,7 @@ tasks:
 
   - id: claim-039
     type: claim
-    status: done
+    status: archived
     target: "the IMPLEMENTATION REPORT is the structured handoff artifact that enables orchestrator routing decisions after code generation"
     classification: closed
     batch: code-generator-agent
@@ -499,7 +499,7 @@ tasks:
 
   - id: claim-040
     type: claim
-    status: done
+    status: archived
     target: "code generation agents without test-awareness produce output that increases iteration cycles with downstream test generation agents"
     classification: open
     batch: code-generator-agent
@@ -511,7 +511,7 @@ tasks:
 
   - id: claim-041
     type: claim
-    status: done
+    status: archived
     target: "language-agnostic code generation prompts require a project_config parameter to specialize for framework and toolchain without prompt rewrites"
     classification: open
     batch: code-generator-agent
@@ -523,7 +523,7 @@ tasks:
 
   - id: claim-042
     type: enrichment
-    status: done
+    status: archived
     target: "intelligent-context-windowing-is-needed-when-spec-artifacts-exceed-the-context-window"
     batch: code-generator-agent
     file: "code-generator-agent-042.md"
@@ -534,7 +534,7 @@ tasks:
 
   - id: claim-043
     type: enrichment
-    status: done
+    status: archived
     target: "specific-escalation-patterns-in-production-agentic-sdlc-systems"
     batch: code-generator-agent
     file: "code-generator-agent-043.md"
@@ -545,11 +545,12 @@ tasks:
 
   - id: claim-044
     type: claim
-    status: pending
+    status: archived
     target: "code-generator-agent"
     classification: agent-profile
     batch: code-generator-agent
     file: "code-generator-agent-044.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: create
-    completed_phases: []
+    current_phase: null
+    completed_phases: [create, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"

@@ -173,6 +173,9 @@ This is a v1 draft based on research synthesis, not production testing. The foll
 
 ---
 
+**Downstream Agent:**
+- [[code-generator-agent]] — the Code Generator is the primary downstream consumer of the spec artifact produced by this agent; the three-document output contract of the Requirements Analyst defines the three-document input contract of the Code Generator
+
 SDLC Phases:
 - [[requirements-phase]]
 - [[agent-registry]]
