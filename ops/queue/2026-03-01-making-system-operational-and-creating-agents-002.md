@@ -20,7 +20,19 @@ Semantic neighbor: null — no existing agent profile captures team sizing princ
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/optimal-multi-agent-team-size-is-3-to-7-specialized-agents.md`
+
+Note title: optimal multi-agent team size is 3 to 7 specialized agents
+Path: agents/optimal-multi-agent-team-size-is-3-to-7-specialized-agents.md
+Word count: ~280 words (body)
+Status: complete
+
+Key content:
+- Explains the two distinct failure modes at each boundary (below 3: single agent suffices; above 7: coordination overhead dominates)
+- Connects the sizing constraint to the orchestrator slot: effective specialist range is 2–6 within a 3–7 team
+- Concrete vault implication: initial catalog scopes to 3–5 agents covering the core build loop
+- Links to sibling claims: [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]]
 
 ## /map
 (to be filled by /map phase)
