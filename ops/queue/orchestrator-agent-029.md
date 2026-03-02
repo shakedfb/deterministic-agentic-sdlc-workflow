@@ -26,7 +26,8 @@ OPEN — design direction, not yet implemented
 - [[the-minimal-viable-agent-set-for-software-building-is-requirements-code-generation-test-generation-and-code-review]]
 
 ## Create
-(filled by create phase)
+Created: agents/specialist-capability-matching-and-load-balancing-is-a-v2-orchestrator-routing-enhancement.md
+Note title: "specialist capability matching and load balancing is a v2 orchestrator routing enhancement"
 
 ## Reflect
 (filled by reflect phase)
