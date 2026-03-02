@@ -20,7 +20,20 @@ Semantic neighbor: null — no base model selection note exists.
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: [[base-model-quality-matters-more-than-framework-choice-for-agent-capability]]
+
+**Core argument:** A capable foundation model (GPT-4o, Claude Opus, or equivalent reasoning tier) is the primary determinant of agent capability. Agents on weak base models fail at planning and context retention regardless of framework sophistication — the framework is scaffolding; the model is the load-bearing element.
+
+**Key design implication:** Model selection is a first-order design decision of equal weight to framework selection. The `framework` field in agent profiles must capture both the orchestration framework and the target base model. An agent profile missing the base model spec is missing a critical implementation parameter.
+
+**Relevant Notes:**
+- [[agent profile framework field should capture both orchestration framework and base model]] — direct schema consequence
+- [[CrewAI aligns best with catalog-driven SDLC agent architectures]] — framework decision is downstream of model selection
+- [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — orchestrator carries the highest reasoning load; its model selection is the most consequential
+- [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — requirements analysis and code review are most demanding for base model reasoning
+
+**Topics assigned:** [[agent-registry]], [[design-phase]]
 
 ## /map
 (to be filled by /map phase)
