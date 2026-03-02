@@ -20,7 +20,18 @@ Semantic neighbor: null — vault has no existing agent profiles to compare agai
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/orchestrator-first-bootstrapping-reduces-multi-agent-coordination-failures.md`
+
+Note title: orchestrator-first bootstrapping reduces multi-agent coordination failures
+Path: agents/orchestrator-first-bootstrapping-reduces-multi-agent-coordination-failures.md
+Word count: ~280 words (body)
+Status: complete
+
+Key content:
+- Explains why the orchestrator is a structural prerequisite, not a sequencing preference
+- Connects to sibling claims: [[optimal multi-agent team size is 3 to 7 specialized agents]], [[phased rollout prevents coordination chaos when building multi-agent systems]]
+- Concrete vault implication: Orchestrator Agent profile should be designed first
 
 ## /map
 (to be filled by /map phase)
