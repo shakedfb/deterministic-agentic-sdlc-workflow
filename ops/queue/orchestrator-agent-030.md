@@ -27,7 +27,8 @@ CLOSED — explicit tension in source
 - [[spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems]]
 
 ## Create
-(filled by create phase)
+Created: agents/lossless-context-transfer-and-context-window-limits-are-in-direct-tension-for-large-spec-artifacts.md
+Note title: "lossless context transfer and context window limits are in direct tension for large spec artifacts"
 
 ## Reflect
 (filled by reflect phase)
