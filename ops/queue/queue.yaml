@@ -9,7 +9,7 @@ phase_order:
 tasks:
   - id: 2026-03-01-making-system-operational-and-creating-agents
     type: extract
-    status: done
+    status: archived
     source: "ops/queue/archive/2026-03-01-making-system-operational-and-creating-agents/2026-03-01-making-system-operational-and-creating-agents.md"
     file: "2026-03-01-making-system-operational-and-creating-agents.md"
     created: "2026-03-01T00:00:00Z"
@@ -18,7 +18,7 @@ tasks:
 
   - id: claim-001
     type: claim
-    status: done
+    status: archived
     target: "orchestrator-first bootstrapping reduces multi-agent coordination failures"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -30,7 +30,7 @@ tasks:
 
   - id: claim-002
     type: claim
-    status: done
+    status: archived
     target: "optimal multi-agent team size is 3 to 7 specialized agents"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -42,7 +42,7 @@ tasks:
 
   - id: claim-003
     type: claim
-    status: done
+    status: archived
     target: "the minimal viable agent set for software-building is requirements, code generation, test generation, and code review"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -54,7 +54,7 @@ tasks:
 
   - id: claim-004
     type: claim
-    status: done
+    status: archived
     target: "spec-centric architecture is the most reliable pattern for agents building systems"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -66,7 +66,7 @@ tasks:
 
   - id: claim-005
     type: claim
-    status: done
+    status: archived
     target: "CrewAI aligns best with catalog-driven SDLC agent architectures"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -78,7 +78,7 @@ tasks:
 
   - id: claim-006
     type: claim
-    status: done
+    status: archived
     target: "workflows are preferable to agents for deterministic SDLC phases"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -90,7 +90,7 @@ tasks:
 
   - id: claim-007
     type: claim
-    status: done
+    status: archived
     target: "phased rollout prevents coordination chaos when building multi-agent systems"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -102,7 +102,7 @@ tasks:
 
   - id: claim-008
     type: claim
-    status: done
+    status: archived
     target: "agentic SDLC systems require explicit human supervision at high-stakes handoff points"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -114,7 +114,7 @@ tasks:
 
   - id: claim-009
     type: claim
-    status: done
+    status: archived
     target: "base model quality matters more than framework choice for agent capability"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -126,7 +126,7 @@ tasks:
 
   - id: claim-010
     type: claim
-    status: done
+    status: archived
     target: "agent profile framework field should capture both orchestration framework and base model"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -138,7 +138,7 @@ tasks:
 
   - id: claim-011
     type: claim
-    status: done
+    status: archived
     target: "agent profiles must include escalation conditions as a required design field"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -150,7 +150,7 @@ tasks:
 
   - id: claim-012
     type: claim
-    status: done
+    status: archived
     target: "requirements agents must produce a structured spec artifact not just prose notes"
     classification: closed
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -162,7 +162,7 @@ tasks:
 
   - id: claim-013
     type: claim
-    status: done
+    status: archived
     target: "what does a minimum viable Requirements Analyst Agent prompt look like and how does it produce a structured spec"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -174,7 +174,7 @@ tasks:
 
   - id: claim-014
     type: claim
-    status: done
+    status: archived
     target: "how does CrewAI handle agent-to-agent handoff and what does its interaction API look like"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -186,7 +186,7 @@ tasks:
 
   - id: claim-015
     type: claim
-    status: done
+    status: archived
     target: "what are the specific escalation patterns used in production agentic SDLC systems"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -198,7 +198,7 @@ tasks:
 
   - id: claim-016
     type: claim
-    status: done
+    status: archived
     target: "can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -210,7 +210,7 @@ tasks:
 
   - id: claim-017
     type: claim
-    status: done
+    status: archived
     target: "what metrics distinguish a well-functioning orchestrator from a coordination bottleneck"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
@@ -222,7 +222,7 @@ tasks:
 
   - id: claim-018
     type: claim
-    status: done
+    status: archived
     target: "when should LangGraph be chosen over CrewAI for an SDLC agent team"
     classification: open
     batch: 2026-03-01-making-system-operational-and-creating-agents
