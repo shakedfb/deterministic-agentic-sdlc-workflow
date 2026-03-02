@@ -26,7 +26,8 @@ CLOSED — design constraint with explicit rationale
 - [[agentic-sdlc-systems-require-explicit-human-supervision-at-high-stakes-handoff-points]]
 
 ## Create
-(filled by create phase)
+Created: agents/hard-iteration-limits-per-task-are-required-to-prevent-runaway-loops-in-multi-agent-pipelines.md
+Note title: "hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines"
 
 ## Reflect
 (filled by reflect phase)
