@@ -26,6 +26,8 @@ The open question this claim tracks is whether the dependency graph analysis can
 - [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]] — the sequential v1 choice defers parallel complexity; this note explains the specific reason dependency analysis is required before that deferral can be lifted
 - [[sequential pipeline predictability and parallel execution efficiency are in direct tension for SDLC build loops]] — parallel execution is the efficiency gain side of the tension; dependency graph analysis is the cost of accessing that gain safely
 - [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — parallel execution with complex dependency relationships is one of the scenarios where LangGraph's explicit graph model may be necessary; CrewAI's parallel task support is less expressive for conditional dependencies
+- [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] — in v2 parallel architectures, a task hitting its iteration limit must not cascade to independent tasks in the fanout; dependency graph analysis is the prerequisite for confirming which tasks are truly independent when one task breaches its limit, making the two design requirements mechanistically coupled
+- [[specialist capability matching and load balancing is a v2 orchestrator routing enhancement]] — a co-v2 concern: both parallel execution (via dependency graph analysis) and capability-aware routing are orchestrator enhancements that become necessary when the system scales beyond single-instance sequential processing; neither can be safely implemented before the sequential baseline is validated
 
 **Topics:**
 - [[agent-registry]]

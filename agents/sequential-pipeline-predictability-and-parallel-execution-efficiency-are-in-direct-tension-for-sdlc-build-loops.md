@@ -15,6 +15,10 @@ The tension is inescapable. Sequentialism trades time for certainty; parallelism
 
 The v1 resolution is deliberate: accept the time cost of sequentialism and use the first runs to map the actual dependency structure. The v2 unlock is dependency graph analysis that converts the known structure into safe parallel subgraphs. This is not a failure of the v1 design; it is the v1 design doing its job by generating the data that makes v2 improvements safe to implement.
 
+Between v1 and v2, the hybrid sequential-hierarchical architecture partially closes the efficiency gap without introducing parallel execution. By adding hierarchical override authority to the sequential pipeline's exception paths, the orchestrator can handle runtime failures dynamically rather than blocking the pipeline — recovering some of the wall-clock time lost to sequential error handling, without requiring the dependency graph analysis that full parallelism demands (see [[hybrid sequential-hierarchical orchestration gives predictable flow with dynamic error handling]]). This v1.5 pattern does not dissolve the tension, but it narrows the gap.
+
+The tension is also measurable once instrumentation is in place. When the orchestrator serializes work that could run concurrently, the coordination overhead ratio rises — Signal Category 3 of [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] flags this as the "orchestrator is serializing parallelizable work" failure mode. When the overhead ratio exceeds 35%, the efficiency cost of sequentialism has become an architectural pressure signal, not just a design trade-off.
+
 ---
 
 **Source:** [[orchestrator-agent]]
@@ -23,6 +27,8 @@ The v1 resolution is deliberate: accept the time cost of sequentialism and use t
 - [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]] — the v1 choice that accepts this tension in favor of predictability; this tension note explains why sequentialism was chosen
 - [[parallel task execution requires dependency graph analysis and is a v2 concern for SDLC pipelines]] — the v2 path that resolves the efficiency side of the tension; dependency analysis is the gate that makes parallel execution safe
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — the phased rollout principle embodies the same tension at the agent-introduction level: sequential agent introduction trades time for control
+- [[hybrid sequential-hierarchical orchestration gives predictable flow with dynamic error handling]] — the v1.5 architecture that partially narrows the efficiency gap by adding hierarchical exception handling to the sequential pipeline, without requiring the dependency graph analysis that full parallelism demands; an intermediate resolution that does not dissolve the tension but reduces its practical cost
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — Signal Category 3 (coordination overhead ratio) and the orchestrator-induced starvation pattern in Signal Category 2 operationalize this tension: when the overhead ratio exceeds 35% because the orchestrator is serializing parallelizable work, the efficiency cost of sequentialism becomes a measurable architectural pressure signal
 
 **Topics:**
 - [[agent-registry]]

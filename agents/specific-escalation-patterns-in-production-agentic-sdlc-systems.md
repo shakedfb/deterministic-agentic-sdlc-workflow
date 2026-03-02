@@ -1,5 +1,5 @@
 ---
-description: Production agentic SDLC systems use four distinct escalation trigger categories — confidence threshold, ambiguity detection, irreversibility gate, and inter-agent conflict — each with a specific communication mechanism, and the governance model (HITL, HOTL, or advisory) determines which triggers require blocking human approval versus monitored autonomous execution.
+description: Production agentic SDLC systems use four distinct escalation trigger categories — confidence threshold, ambiguity detection, irreversibility gate, and loop termination — each with a specific communication mechanism, and the governance model (HITL, HOTL, or advisory) determines which triggers require blocking human approval versus monitored autonomous execution; confidence threshold is the only non-blocking trigger, making it the exception rather than the default.
 topics: ["[[agent-registry]]", "[[design-phase]]", "[[operations-phase]]"]
 source: "[[2026-03-01-making-system-operational-and-creating-agents]]"
 classification: open
@@ -60,6 +60,35 @@ Stopping conditions (maximum iterations, error accumulation thresholds) prevent 
 
 This pattern is especially relevant in code generation and debugging agents where the agent may cycle through plausible fixes without resolving a root cause it lacks context to identify.
 
+## Concrete Iteration Limits for Loop Termination
+
+The loop termination escalation pattern requires specific hard-cap numbers to be operational rather than aspirational. The baseline calibration for the four-phase SDLC build loop:
+
+- **Code generation**: 3 attempts maximum before loop termination escalation
+- **Code review cycles**: 2 cycles maximum before loop termination escalation
+- **Workflow-level threshold**: 3 or more task-level escalations within a single workflow run triggers a full human review of the entire workflow, not just the failing task
+
+These numbers provide the operational instantiation of loop termination escalation — moving from the abstract pattern to a concrete, enforceable calibration. They are hypotheses derived from typical development task complexity and require empirical validation against production data (see [[the four-phase build loop calibration hypothesis for iteration limits]]).
+
+The workflow-level threshold (3 escalations → full review) addresses a failure mode that per-task limits do not catch: a pipeline where multiple tasks each fail once and recover on retry, but the cumulative escalation frequency signals a systemic problem with the context assembly, task decomposition, or specialist quality.
+
+## Governance Model Mapping for Each Escalation Category
+
+The four escalation trigger categories map to specific governance tiers. This mapping is not flexible — the tier assignment reflects the consequence level of each trigger type:
+
+| Trigger Category | Governance Model | Blocking? | Rationale |
+|-----------------|-----------------|-----------|-----------|
+| Confidence threshold | HOTL (Human on the Loop) | Non-blocking | Plausible-but-unvalidatable output; agent can proceed while human monitors |
+| Ambiguity detection | HITL (Human in the Loop) | Blocking | Undecomposable intent or conflicting outputs require human resolution before work proceeds |
+| Irreversibility gate | HITL (Human in the Loop) | Blocking | Production modifications, elevated permissions, security changes cannot proceed without authorization |
+| Loop termination | HITL (Human in the Loop) | Blocking | Exceeded retry limits signal a problem the agent cannot resolve autonomously |
+
+**HOTL = Human on the Loop**: The human monitors and can intervene, but the agent does not halt. Used when the risk of proceeding is manageable and the human's intervention is corrective rather than authorizing.
+
+**HITL = Human in the Loop**: The pipeline halts until the human acts. Used when the risk of proceeding without authorization exceeds the cost of stopping.
+
+The confidence threshold is the only non-blocking escalation in the standard taxonomy. This reflects its nature: a confidence threshold alert says "this output may need review" rather than "this action requires authorization." The human reviews the flagged output asynchronously; the pipeline can continue to downstream tasks that do not depend on the flagged output.
+
 ## Governance Models That Determine Escalation Behavior
 
 The trigger category determines *when* escalation occurs; the governance model determines *how blocking* it is.
@@ -97,7 +126,7 @@ This provides the specific, testable criteria that distinguish a complete escala
 
 ---
 
-**Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (line 95)
+**Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (line 95); enriched from [[orchestrator-agent]]
 
 **Relevant Notes:**
 - [[agent profiles must include escalation conditions as a required design field]] — this note provides the specific trigger taxonomy and governance model vocabulary that fills the `escalation_conditions` field with actionable content rather than placeholders
@@ -106,6 +135,12 @@ This provides the specific, testable criteria that distinguish a complete escala
 - [[crewai-agent-to-agent-handoff-and-interaction-api]] — task guardrails in CrewAI are the implementation surface for confidence threshold escalation; the manager agent in hierarchical mode is the implementation surface for inter-agent conflict escalation
 - [[requirements-analyst-agent]] — the Requirements Analyst Agent is the first concrete application of this escalation taxonomy: its four explicit escalation conditions (scope ambiguity, implied security constraints, undefined system overlap, irreversible data model decision) map to ambiguity detection and irreversibility gate categories from this note
 - [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — the 5-15% escalation rate and escalation quality metrics defined for orchestrators are the behavioral observables that verify the escalation trigger calibration described here is correctly tuned
+- [[the four-phase build loop calibration hypothesis for iteration limits]] — the specific iteration limit numbers (3 code generation attempts, 2 review cycles) are the loop termination calibration that operationalizes the loop termination escalation pattern documented here
+- [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] — the design principle that makes concrete loop termination numbers necessary; this note provides the numbers that principle calls for
+- [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]] — the backward iteration loops in the sequential pipeline are the operational mechanism that generates loop termination escalations: each retry cycle that exhausts its hard limit fires the loop termination pattern documented here, making the two notes mechanistically coupled at the phase-retry boundary
+- [[hybrid sequential-hierarchical orchestration gives predictable flow with dynamic error handling]] — the exception path in the hybrid pattern activates escalation from this taxonomy: the orchestrator's hierarchical override authority terminates at the hard iteration limit and converts exceeded retries into HITL blocking escalations rather than continued autonomous routing
+- [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — LangGraph's conditional edge model is the framework-level implementation surface for HITL blocking escalations: encoding human authorization as a named graph node (rather than an implicit convention) is how the irreversibility gate and loop termination categories become structurally enforced rather than prompt-level guidelines
+- [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]] — escalation events (particularly the rate of human escalations) are a primary signal the observability layer must capture; without trace-level instrumentation, the 5-15% escalation rate target is an aspiration rather than a measurable threshold
 
 **Topics:**
 - [[agent-registry]]

@@ -17,14 +17,32 @@ The implication for this vault is non-negotiable: the Requirements Analyst Agent
 
 This also clarifies the architectural role of the Requirements Analyst Agent within the minimal viable agent set from [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]]. It is not simply "the first agent" — it is the agent that creates the shared ground truth. Its output quality determines the ceiling for every agent that follows.
 
+## Operational Mechanism: The Spec Travels with Every Handoff
+
+Spec-centric architecture has a specific operational mechanism at runtime. The spec artifact (or its relevant sections) must travel with every task assignment at handoff boundaries. The orchestrator's context transfer protocol mandates this behavior.
+
+The specific protocol: at each handoff, the orchestrator packages four components — the spec artifact, all upstream outputs produced so far, the specific task being delegated, and any iteration feedback from prior failed attempts. The spec is always the first component, because without it, downstream agents lose the authoritative ground truth and begin interpreting from prior outputs rather than from original intent.
+
+This operationalizes spec-centric architecture at the handoff level: not just "maintain a spec" but "carry the spec forward at every pipeline transition." A spec that exists but is not transferred becomes reference material that agents cannot access at execution time — architecturally present but operationally absent. The orchestrator's responsibility is to ensure the spec is present in every specialist's context window, not merely stored somewhere retrievable.
+
+The orchestrator's validation function at each handoff boundary is specifically validation against the spec — checking whether the specialist's output satisfies the handoff contract as defined by the spec's acceptance criteria. This is why [[the orchestrator agent's role is routing and validation not content generation]] is the architectural complement to spec-centric design: an orchestrator that also generates content cannot perform objective spec-based validation, because it would be evaluating outputs it partially produced. Strict role separation preserves the spec as the neutral reference.
+
+The corollary: large specs create a context window tension (see [[lossless context transfer and context window limits are in direct tension for large spec artifacts]]). For manageable spec sizes, the full spec transfers at every handoff. For large specs, intelligent windowing sends the full spec on the first task and relevant sections on subsequent tasks. In both cases, the principle is unchanged: the spec components the specialist needs must be in their context window, not referenced externally.
+
 ---
 
-**Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (lines 37-41)
+**Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (lines 37-41); enriched from [[orchestrator-agent]]
 
 **Relevant Notes:**
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the requirements agent in the minimal set must produce a structured spec for downstream agents to consume; spec-centric architecture defines the output contract for that agent
 - [[requirements agents must produce a structured spec artifact not just prose notes]] — the operational consequence of this architectural principle applied to the Requirements Analyst Agent profile
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator coordinates against the spec as shared state; without a spec, the orchestrator has no consistent ground truth to route work from
+- [[lossless context transfer at handoff boundaries is the orchestrators most critical responsibility]] — the handoff protocol that carries the spec forward at every pipeline transition; lossless transfer operationalizes spec-centric architecture at the execution level
+- [[lossless context transfer and context window limits are in direct tension for large spec artifacts]] — the constraint that emerges when spec size grows; the spec-centric principle creates the artifact that creates the context window tension
+- [[the orchestrator agent's role is routing and validation not content generation]] — the orchestrator's validation function at every handoff is spec-based validation; routing-not-generating preserves the spec as the neutral reference that neither the orchestrator nor any specialist can contaminate by generating against their own judgment
+- [[token cost of lossless context transfer is justified by the failure cost of context stripping]] — the spec artifact is the largest component of the context package at each handoff; this note provides the economic argument that the token cost of carrying the spec forward is rational, making spec-centric architecture economically defensible
+- [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]] — the sequential pipeline is the primary architectural instantiation of spec-centric flow; each phase produces output that the next phase validates against the same spec, and backward iteration loops are the mechanism for converging on spec compliance within each phase
+- [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — the spec defines the acceptance criteria that determine when agent authority ends and human judgment begins; ambiguity in the spec that agents cannot resolve autonomously is the primary trigger for escalation, making spec quality the upstream determinant of supervision frequency
 
 **Topics:**
 - [[agent-registry]]

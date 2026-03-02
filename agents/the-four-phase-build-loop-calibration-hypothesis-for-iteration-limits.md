@@ -1,5 +1,5 @@
 ---
-description: The specific iteration limits of 3 code generation attempts and 2 code review cycles before escalation are calibration hypotheses derived from typical development task complexity — reasonable starting points that require empirical validation against production data to determine whether they are too tight for complex tasks or too loose for simple ones.
+description: The specific iteration limits of 3 code generation attempts, 2 code review cycles, and a workflow-level threshold of 3 task escalations before full human review are calibration hypotheses derived from typical development task complexity — reasonable starting points that require empirical validation against production data to determine whether they are too tight for complex tasks or too loose for simple ones.
 topics: ["[[agent-registry]]", "[[design-phase]]", "[[operations-phase]]"]
 source: "[[orchestrator-agent]]"
 classification: open
@@ -20,7 +20,7 @@ The "typical development task" assumption embedded in these numbers is the weake
 
 The dependency on observability is critical: these numbers cannot be validated without [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]]. Until execution traces capture per-task retry counts and outcomes, the hypothesis cannot be confirmed or refuted. The numbers will remain calibration guesses rather than validated thresholds until the observability layer exists.
 
-The practical implication for v1 is to implement the baseline calibration, instrument the retry counts, and flag tasks that consistently hit their limits. Patterns in which tasks and which agents trigger frequent escalation are the empirical signal that recalibration is needed.
+The practical implication for v1 is to implement the baseline calibration, instrument the retry counts, and flag tasks that consistently hit their limits. Patterns in which tasks and which agents trigger frequent escalation are the empirical signal that recalibration is needed. The calibration connects directly to the sequential pipeline's backward iteration mechanism: the numbers in this hypothesis are precisely what bounds the backward loops in [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]]. Once the observability layer is operational, the 5-15% escalation rate target defined in [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] provides the measurable signal that calibration is in the right range — an escalation rate consistently below 5% suggests the limits are too loose for the task complexity being processed, while a rate above 15% signals the limits are too tight or the agents are underperforming.
 
 ---
 
@@ -28,8 +28,10 @@ The practical implication for v1 is to implement the baseline calibration, instr
 
 **Relevant Notes:**
 - [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] — the principle that makes calibration necessary; this note provides the specific numbers being hypothesized
-- [[what are the specific escalation patterns used in production agentic SDLC systems]] — loop termination is one of the four escalation categories; the calibration numbers determine when loop termination triggers
+- [[what are the specific escalation patterns used in production agentic SDLC systems]] — loop termination is one of the four escalation categories; the calibration numbers determine when loop termination triggers; that note's section on concrete iteration limits provides the operational instantiation of the same calibration numbers documented here
 - [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]] — the measurement prerequisite for validating these hypotheses; without execution trace data, the numbers cannot be empirically tested
+- [[sequential pipeline with backward iteration loops is the lower-risk v1 architecture for multi-agent build loops]] — the backward iteration loops in the sequential pipeline are the architectural mechanism that these calibration numbers directly bound; the calibration and the pipeline architecture are operationally coupled at the phase-retry boundary
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — the 5-15% escalation rate target provides the behavioral observable that indicates whether the calibration numbers are in the right range; this closes the feedback loop between the hypothesis and its empirical validation signal
 
 **Topics:**
 - [[agent-registry]]

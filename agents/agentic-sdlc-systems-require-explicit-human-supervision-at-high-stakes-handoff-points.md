@@ -19,6 +19,10 @@ This also connects to the phased rollout pattern from [[phased rollout prevents 
 
 The catalog-level implication is that `escalation_conditions` should be treated as a required field in every agent profile, not an optional annotation. If an agent profile does not specify when it escalates, the design is missing a critical constraint. The absence of that field is not a sign that the agent operates without limits — it is a sign that the limits have not been thought through.
 
+The supervision principle also has an enforcement mechanism at the pipeline level: [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] defines the precise point at which agent authority terminates and human judgment replaces autonomous iteration. Hard limits are not merely a safety mechanism — they are the structural operationalization of bounded agent authority. Without a hard cap, the boundary between "agent retrying" and "agent operating beyond its sanctioned scope" is invisible.
+
+Finally, supervision that cannot be measured cannot be calibrated. The [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]] establishes that escalation events — the rate of human escalations triggered across pipeline runs — are among the highest-value signals for assessing whether the supervision design is correctly tuned. An escalation rate that is too high suggests the thresholds are too conservative; a rate near zero in a complex system signals that supervision triggers are not firing when they should. Without the observability layer, these calibration judgments are guesswork.
+
 ---
 
 **Source:** [[2026-03-01-making-system-operational-and-creating-agents]] (lines 66-70)
@@ -29,6 +33,10 @@ The catalog-level implication is that `escalation_conditions` should be treated 
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural escalation routing layer; it receives agent signals and determines whether to proceed autonomously or surface to a human
 - [[workflows are preferable to agents for deterministic SDLC phases]] — the agent-vs-workflow distinction overlaps with the supervision question: deterministic workflow phases can be gated without human involvement; agent-mediated judgment phases are where supervision conditions matter most
 - [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — LangGraph's conditional edge model enables encoding supervision gates as first-class graph nodes; the framework choice has direct implications for how human supervision checkpoints are implemented in the execution graph
+- [[what are the specific escalation patterns used in production agentic SDLC systems]] — the four trigger categories (confidence threshold, ambiguity detection, irreversibility gate, loop termination) and governance models (HITL/HOTL) are the detailed mechanism by which "explicit supervision at high-stakes handoff points" is specified and enforced; this note provides the taxonomy that gives the structural principle operational substance
+- [[hard iteration limits per task are required to prevent runaway loops in multi-agent pipelines]] — hard limits are the enforcement mechanism for bounded agent authority: they define the precise point at which autonomous iteration must stop and human judgment must take over, making the supervision principle structurally enforced rather than convention-dependent
+- [[observability layer with trace-level instrumentation is required before orchestrator metrics become measurable]] — escalation rate (the frequency of human supervision triggers across pipeline runs) is the primary behavioral signal for verifying that supervision thresholds are correctly calibrated; the observability layer is the prerequisite for measuring whether the supervision design is working
+- [[requirements-analyst-agent]] — the first concrete implementation of this supervision principle in the vault: its explicit escalation conditions and the 20% escalation rate metric provide an observable test of whether the agent's supervision thresholds are correctly calibrated in practice
 
 **Topics:**
 - [[agent-registry]]

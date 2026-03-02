@@ -34,7 +34,7 @@ A healthy orchestrator distributes work across specialist agents proportionally 
 
 **Orchestrator-induced starvation:** Specialist agents are idle because the orchestrator is processing slowly or serializing work that could be parallelized. The signature is high orchestrator CPU/token usage combined with low specialist utilization — the bottleneck is upstream of the specialists.
 
-**Unbalanced routing:** One specialist is saturated while others are idle, caused by the orchestrator defaulting to one agent even when others are capable of the same task. This is a task-routing calibration failure, not a throughput failure.
+**Unbalanced routing:** One specialist is saturated while others are idle, caused by the orchestrator defaulting to one agent even when others are capable of the same task. This is a task-routing calibration failure, not a throughput failure. The v2 architectural remedy for this pattern is [[specialist capability matching and load balancing is a v2 orchestrator routing enhancement]] — capability-aware routing becomes the structural fix when unbalanced utilization signals are consistently observed at scale.
 
 **Measurement:** Track tokens-consumed and wall-clock execution time per agent role per workflow. Imbalance greater than 40% between comparable specialists during peak indicates routing dysfunction.
 
