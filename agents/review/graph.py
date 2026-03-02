@@ -11,10 +11,10 @@ from typing import Annotated, Any, TypedDict
 
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 
+from agents.llm import get_llm
 from agents.memory import RedisStateStore
 from agents.models import (
     CodeArtifact,
@@ -25,7 +25,6 @@ from agents.models import (
     WorkflowState,
 )
 from agents.prompts import REVIEW_RELIABILITY_PROMPT, REVIEW_SCALE_PROMPT, REVIEW_SECURITY_PROMPT
-from agents.settings import settings
 from agents.tracing import trace_phase
 
 logger = structlog.get_logger()
@@ -72,7 +71,7 @@ def _parse_findings(raw: dict, category: str) -> list[ReviewFinding]:
 @trace_phase("review")
 async def security_review(state: ReviewState) -> dict:
     """Pass 1: Security analysis — OWASP Top 10, injections, auth gaps."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
     code = _code_to_string(state["code_artifact"])
     sast_output = state.get("sast_output", "No SAST output available")
 
@@ -116,7 +115,7 @@ async def security_review(state: ReviewState) -> dict:
 @trace_phase("review")
 async def scale_review(state: ReviewState) -> dict:
     """Pass 2: Scale analysis — N+1 queries, memory leaks, missing indexes."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
     code = _code_to_string(state["code_artifact"])
 
     prompt = REVIEW_SCALE_PROMPT.format(code=code)
@@ -146,7 +145,7 @@ async def scale_review(state: ReviewState) -> dict:
 @trace_phase("review")
 async def reliability_review(state: ReviewState) -> dict:
     """Pass 3: Reliability analysis — error handling, circuit breakers, idempotency."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
     code = _code_to_string(state["code_artifact"])
 
     prompt = REVIEW_RELIABILITY_PROMPT.format(code=code)

@@ -7,10 +7,10 @@ from typing import Annotated, Any, TypedDict
 
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 
+from agents.llm import get_llm
 from agents.memory import RedisStateStore, VectorMemory
 from agents.models import (
     CodeArtifact,
@@ -47,7 +47,7 @@ class DevState(TypedDict):
 @trace_phase("development")
 async def plan_tasks(state: DevState) -> dict:
     """Node 1: Decompose RequirementSpec into implementation subtasks."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
     spec = state["requirement_spec"]
 
     memory = VectorMemory()
@@ -83,7 +83,7 @@ async def plan_tasks(state: DevState) -> dict:
 @trace_phase("development")
 async def generate_code(state: DevState) -> dict:
     """Node 2: LLM generates application code for each subtask."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0.1)
+    llm = get_llm(temperature=0.1)
     spec = state["requirement_spec"]
     subtasks = state["subtasks"]
     error_ctx = "\n".join(state.get("error_context", [])) or "No previous errors"
@@ -146,7 +146,7 @@ async def generate_code(state: DevState) -> dict:
 @trace_phase("development")
 async def generate_tests(state: DevState) -> dict:
     """Node 3: LLM generates unit tests for the generated code."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0.1)
+    llm = get_llm(temperature=0.1)
     spec = state["requirement_spec"]
     artifact = state["code_artifact"]
 

@@ -13,10 +13,10 @@ from typing import Annotated, Any, TypedDict
 import httpx
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 
+from agents.llm import get_llm
 from agents.memory import RedisStateStore, VectorMemory
 from agents.models import (
     CodeArtifact,
@@ -46,7 +46,7 @@ class DeployState(TypedDict):
 @trace_phase("deployment")
 async def generate_terraform(state: DeployState) -> dict:
     """Node 1: LLM generates Terraform HCL for the feature."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
     artifact = state["code_artifact"]
 
     code_summary = "\n".join(

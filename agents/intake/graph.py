@@ -7,14 +7,13 @@ from typing import Annotated, Any, TypedDict
 
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 
+from agents.llm import get_llm
 from agents.memory import RedisStateStore, VectorMemory
 from agents.models import AcceptanceCriterion, Phase, RequirementSpec, WorkflowState
 from agents.prompts import INTAKE_PARSE_PROMPT
-from agents.settings import settings
 from agents.tracing import trace_phase
 from config.guardrails_spec import validate_requirement_spec
 
@@ -72,7 +71,7 @@ async def enrich_context(state: IntakeState) -> dict:
 @trace_phase("intake")
 async def generate_spec(state: IntakeState) -> dict:
     """Node 3: LLM generates a structured RequirementSpec from the ticket data."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0)
+    llm = get_llm(temperature=0)
 
     prompt = INTAKE_PARSE_PROMPT.format(
         ticket_data=json.dumps(state["ticket_data"], indent=2),

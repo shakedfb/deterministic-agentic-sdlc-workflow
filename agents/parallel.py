@@ -12,12 +12,10 @@ from typing import Any
 
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
-
 from agents.cache import GenerationCache
+from agents.llm import get_llm
 from agents.models import CodeArtifact, DependencyChange, RequirementSpec, SourceFile
 from agents.prompts import DEV_CODEGEN_PROMPT
-from agents.settings import settings
 from agents.tracing import trace_phase
 from config.guardrails_code import validate_code
 
@@ -75,7 +73,7 @@ async def parallel_codegen(
     """Execute code generation for multiple subtasks in parallel where possible."""
     layers, _ = _classify_dependencies(subtasks)
     cache = GenerationCache()
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0.1)
+    llm = get_llm(temperature=0.1)
 
     all_source_files: list[SourceFile] = []
     all_deps: list[DependencyChange] = []

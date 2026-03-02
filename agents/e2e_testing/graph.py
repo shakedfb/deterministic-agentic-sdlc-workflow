@@ -7,10 +7,10 @@ from typing import Annotated, Any, TypedDict
 
 import structlog
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 
+from agents.llm import get_llm
 from agents.memory import RedisStateStore
 from agents.models import (
     CodeArtifact,
@@ -76,7 +76,7 @@ async def provision_environment(state: E2EState) -> dict:
 @trace_phase("e2e_testing")
 async def generate_e2e_tests(state: E2EState) -> dict:
     """Node 2: LLM generates E2E tests based on acceptance criteria."""
-    llm = ChatOpenAI(model=settings.openai_model, temperature=0.1)
+    llm = get_llm(temperature=0.1)
     spec = state["requirement_spec"]
     artifact = state["code_artifact"]
 
