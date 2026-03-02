@@ -54,7 +54,19 @@ Completed: 2026-03-02
 - This note is a hub for the escalation cluster; downstream notes (escalation-conditions, escalation-patterns) both link back to it
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — added inline link: "escalation rate metric (target: below 20%) provides a calibration signal per [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]]"
+- [[when-should-langgraph-be-chosen-over-crewai-for-an-sdlc-agent-team]] — added backward link: LangGraph conditional edges for encoding supervision gates as first-class graph nodes
+
+**Gap check:**
+- requirements-analyst-agent mentioned escalation rate without linking supervision principle; gap closed
+- when-langgraph described supervision implications without linking this note; gap closed
+
+**Sibling cross-check:**
+- agentic-sdlc-supervision is a hub note; already well-referenced via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

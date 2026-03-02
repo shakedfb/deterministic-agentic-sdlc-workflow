@@ -45,7 +45,21 @@ Completed: 2026-03-02
 - This note's four signal categories (delegation success, utilization balance, coordination overhead, error containment) are now referenced by [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] and [[optimal multi-agent team size is 3 to 7 specialized agents]] as the quantified mechanisms behind their claims
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[phased-rollout-prevents-coordination-chaos-when-building-multi-agent-systems]] — added backward link: orchestrator health metrics as criteria for declaring phase stability
+- [[specific-escalation-patterns-in-production-agentic-sdlc-systems]] — added backward link: escalation rate as a metric observable for calibration verification
+- [[when-should-langgraph-be-chosen-over-crewai-for-an-sdlc-agent-team]] — added backward link: LangGraph tracing provides instrumentation surface for the four signal categories
+
+**Gap check:**
+- phased-rollout discussed phase readiness without linking the orchestrator metrics definition; gap closed
+- specific-escalation-patterns mentioned escalation rate without linking what-metrics; gap closed
+- when-langgraph discussed observability without linking metrics note; gap closed
+
+**Sibling cross-check:**
+- orchestrator-first, optimal-team-size already reference what-metrics via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

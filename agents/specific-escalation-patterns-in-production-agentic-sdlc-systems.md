@@ -104,6 +104,8 @@ This provides the specific, testable criteria that distinguish a complete escala
 - [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — the structural argument for why supervision is required; this note specifies the mechanism by which that supervision is triggered and communicated
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural escalation routing layer: specialist agents raise escalation signals, the orchestrator determines whether they are blocking or asynchronous based on the governance model
 - [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — task guardrails in CrewAI are the implementation surface for confidence threshold escalation; the manager agent in hierarchical mode is the implementation surface for inter-agent conflict escalation
+- [[what does a minimum viable Requirements Analyst Agent prompt look like and how does it produce a structured spec]] — the Requirements Analyst Agent is the first concrete application of this escalation taxonomy: its four explicit escalation conditions (scope ambiguity, implied security constraints, undefined system overlap, irreversible data model decision) map to ambiguity detection and irreversibility gate categories from this note
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — the 5-15% escalation rate and escalation quality metrics defined for orchestrators are the behavioral observables that verify the escalation trigger calibration described here is correctly tuned
 
 **Topics:**
 - [[agent-registry]]

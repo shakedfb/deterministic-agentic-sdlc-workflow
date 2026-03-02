@@ -56,7 +56,19 @@ Completed: 2026-03-02
 - specific-escalation-patterns (015) was the natural follow-on that fills the schema field with concrete vocabulary
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — added inline link: escalation conditions section implements [[agent profiles must include escalation conditions as a required design field]]
+- [[agent-profiles-must-include-escalation-conditions]] — added backward link to [[what does a minimum viable Requirements Analyst Agent prompt look like]] as the first concrete implementation
+
+**Gap check:**
+- requirements-analyst-agent implemented escalation conditions without linking the schema requirement; gap closed
+- escalation-conditions note didn't reference its first concrete implementation; gap closed
+
+**Sibling cross-check:**
+- specific-escalation-patterns already references escalation-conditions as the schema requirement note
 
 ## /validate
 (to be filled by /validate phase)

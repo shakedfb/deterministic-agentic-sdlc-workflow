@@ -34,6 +34,7 @@ The implication for this vault is that the agent catalog should track phase read
 - [[optimal multi-agent team size is 3 to 7 specialized agents]] — the four-phase rollout produces a 5–6 agent team by Phase 4, which stays within the coordination-efficient range
 - [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — Phase 1 uses manual code review as a deliberate human supervision checkpoint; supervision is built into the rollout sequence, not bolted on after
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the 4-agent specialist set maps directly to Phases 1 and 2; the minimal set is not just a catalog scope decision but an operationalized phasing recommendation
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — phase readiness depends on the orchestrator functioning as a coordinator before new specialists are integrated; the four signal categories (delegation success rate, utilization balance, coordination overhead, error containment) are the observable criteria for declaring a phase stable
 
 **Topics:**
 - [[agent-registry]]

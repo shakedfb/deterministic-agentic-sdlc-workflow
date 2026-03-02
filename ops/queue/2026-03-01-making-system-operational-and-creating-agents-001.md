@@ -54,7 +54,20 @@ Completed: 2026-03-02
 - Sibling claims reviewed: [[optimal multi-agent team size is 3 to 7 specialized agents]], [[phased rollout prevents coordination chaos when building multi-agent systems]] already linked; added metrics and crewai-handoff as new connections
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — added inline references to orchestrator-first principle (body text)
+- [[crewai-aligns-best-with-catalog-driven-sdlc-agent-architectures]] — added inline link in phased rollout alignment paragraph
+- No additional gaps found; note was already well-referenced via reflect phase
+
+**Gap check:**
+- requirements-analyst-agent now references orchestrator-first principle inline (was mentioned without link)
+- No orphan incoming links detected
+
+**Sibling cross-check:**
+- All sibling claims with completed_phases including "create" were checked; connections via reflect phase are comprehensive
 
 ## /validate
 (to be filled by /validate phase)

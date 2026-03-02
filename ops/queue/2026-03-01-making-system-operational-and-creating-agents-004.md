@@ -45,7 +45,19 @@ Completed: 2026-03-02
 - Sibling claims reviewed: core connections already present; note well-integrated into the spec-centric cluster
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — added inline link to spec-centric principle in intro paragraph
+- [[spec-centric-architecture]] note body updated to reference [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] (which operationalizes spec-centric)
+
+**Gap check:**
+- requirements-analyst-agent mentioned spec-centric as foundational without wiki-linking; gap closed
+- spec-centric body mentioned Spec Kit without linking the adoption decision note; gap closed
+
+**Sibling cross-check:**
+- when-langgraph: spec as shared state for LangGraph nodes is a genuine gap; not added (too indirect)
 
 ## /validate
 (to be filled by /validate phase)

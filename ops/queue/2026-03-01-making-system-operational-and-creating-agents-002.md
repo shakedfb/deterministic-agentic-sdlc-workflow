@@ -52,7 +52,18 @@ Completed: 2026-03-02
 - Sibling claims: added phased-rollout (already listed in others but missing here) and metrics-orchestrator (which quantifies the scaling math behind the 3-7 boundary)
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[crewai-aligns-best-with-catalog-driven-sdlc-agent-architectures]] — added backward link: 3-7 team range as natural operating envelope for CrewAI team modes
+- Note already referenced by: orchestrator-first, the-minimal-viable-set, phased-rollout, what-metrics
+
+**Gap check:**
+- crewai-aligns-best mentioned team size implicitly but did not link this note; gap closed
+
+**Sibling cross-check:**
+- crewai-aligns-best now links team-size as a constraint on its framework recommendation
 
 ## /validate
 (to be filled by /validate phase)

@@ -109,6 +109,7 @@ This connects directly to [[orchestrator-first bootstrapping reduces multi-agent
 - [[optimal multi-agent team size is 3 to 7 specialized agents]] — the coordination overhead scaling research (super-linear at exponent 1.724) explains why the 3-7 range exists; beyond that range, a centralized orchestrator's coordination cost exceeds the value of additional specialists
 - [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — the 5-15% escalation rate target for a well-calibrated orchestrator is the measurable expression of that supervision principle
 - [[what are the specific escalation patterns used in production agentic SDLC systems]] — the orchestrator's escalation behavior is measurable via escalation rate; over- and under-escalation are both diagnostic signals
+- [[phased rollout prevents coordination chaos when building multi-agent systems]] — the four signal categories define when a phase boundary can be declared stable: delegation success rate ≥ 95% and coordination overhead ratio < 20% indicate the orchestrator is ready to absorb a new specialist agent from the next rollout phase
 
 **Topics:**
 - [[agent-registry]]

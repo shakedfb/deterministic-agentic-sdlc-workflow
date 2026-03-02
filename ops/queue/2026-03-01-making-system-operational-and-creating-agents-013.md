@@ -55,7 +55,19 @@ Completed: 2026-03-02
 - Note references [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] via the three-file structure grounded in Kiro/GitHub Spec Kit convergence
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[agent-profiles-must-include-escalation-conditions-as-a-required-design-field]] — added backward link: Requirements Analyst Agent is the first concrete implementation of escalation conditions schema requirement
+- [[specific-escalation-patterns-in-production-agentic-sdlc-systems]] — added backward link: RAA's four escalation conditions map to ambiguity detection + irreversibility gate categories
+
+**Gap check:**
+- escalation-conditions schema note didn't reference its first implemented example; gap closed
+- specific-escalation-patterns didn't reference the RAA as its first concrete application; gap closed
+
+**Sibling cross-check:**
+- can-github-spec-kit links requirements-analyst-agent as the implementing profile
 
 ## /validate
 (to be filled by /validate phase)

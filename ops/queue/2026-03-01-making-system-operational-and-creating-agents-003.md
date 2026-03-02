@@ -47,7 +47,19 @@ Completed: 2026-03-02
 - Sibling claims reviewed: this note is already well-connected; the four existing links cover the key dependencies without creating noise
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[crewai-agent-to-agent-handoff-and-interaction-api]] — added link: sequential mode task chain for minimal viable set (requirements → code → test → review)
+- [[workflows-are-preferable-to-agents-for-deterministic-sdlc-phases]] — added backward link: the four-agent set covers judgment-intensive phases; surrounding mechanical tasks are workflow territory
+
+**Gap check:**
+- crewai-handoff mentioned the 4-agent set without linking; gap closed
+- workflows-preferable described the build loop agents without linking minimal-viable-set; gap closed
+
+**Sibling cross-check:**
+- Connections are comprehensive via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

@@ -50,7 +50,20 @@ Completed: 2026-03-02
 - base-model-quality (009) is a constraint shared by both framework options; the parallel constraint makes it a natural extension of the when-langgraph decision criteria
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[agentic-sdlc-systems-require-explicit-human-supervision-at-high-stakes-handoff-points]] — added backward link: LangGraph conditional edges for encoding supervision gates as first-class graph nodes
+- [[when-should-langgraph]] — added backward links to agentic-sdlc-supervision and what-metrics in Relevant Notes
+- [[base-model-quality-matters-more-than-framework-choice-for-agent-capability]] — added backward link: both LangGraph and CrewAI share the base model prerequisite
+
+**Gap check:**
+- agentic-sdlc-supervision didn't reference LangGraph as the implementation mechanism for supervision gates; gap closed
+- base-model-quality mentioned LangGraph inline without wiki-linking when-langgraph; gap closed (via when-langgraph's reflect)
+
+**Sibling cross-check:**
+- crewai-aligns-best, workflows-preferable, agent-profile-framework-field all reference when-langgraph via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

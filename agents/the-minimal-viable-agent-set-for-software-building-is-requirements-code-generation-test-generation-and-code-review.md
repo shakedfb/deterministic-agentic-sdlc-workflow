@@ -26,6 +26,7 @@ The constraint also clarifies what to defer. Deployment Orchestrator Agent, Oper
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the prerequisite anchor; the minimal viable specialist set is built on top of it
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — the requirements agent in this set must produce a structured spec artifact to enable the downstream code generation agent
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — this 4-agent set maps directly to Phase 1 and Phase 2 of the recommended phased rollout
+- [[workflows are preferable to agents for deterministic SDLC phases]] — the four agents in the minimal set cover the judgment-intensive phases; the surrounding mechanical tasks (linting, build triggers, deployment gating) are workflow territory that complements rather than competes with the agent set
 
 **Topics:**
 - [[agent-registry]]

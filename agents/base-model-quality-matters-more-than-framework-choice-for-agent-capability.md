@@ -26,6 +26,7 @@ This aligns with the insight from [[agent profile framework field should capture
 **Relevant Notes:**
 - [[agent profile framework field should capture both orchestration framework and base model]] — the direct schema consequence of this claim: the `framework` field must capture both orchestration layer and base model as co-equal design decisions
 - [[CrewAI aligns best with catalog-driven SDLC agent architectures]] — framework selection is still a meaningful decision, but it is downstream of model selection; CrewAI's fit for catalog-driven architecture is evaluated assuming a capable base model is in place
+- [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — both LangGraph and CrewAI have the same dependency on base model quality; neither framework compensates for a weak model, making base model selection the shared prerequisite for either framework choice
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator carries the highest reasoning load in a multi-agent system (context tracking, task routing, escalation judgment); its base model selection is the most consequential single model decision in the catalog
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — each agent in the minimal set has different capability requirements; requirements analysis and code review are most demanding for base model reasoning, which should inform model tier selection per agent
 

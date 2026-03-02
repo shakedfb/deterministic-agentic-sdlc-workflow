@@ -47,7 +47,18 @@ Completed: 2026-03-02
 - minimal-viable-set (003) was missing from phased-rollout but directly referenced by it conceptually
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[what-metrics-distinguish-a-well-functioning-orchestrator-from-a-coordination-bottleneck]] — added backward link: delegation success rate and coordination overhead ratio as phase stability criteria
+- Note already well-referenced via reflect phase
+
+**Gap check:**
+- what-metrics described phase readiness criteria without linking phased-rollout; gap closed
+
+**Sibling cross-check:**
+- crewai-aligns-best now links phased-rollout for incremental deployment context (added in claim-006 reweave)
 
 ## /validate
 (to be filled by /validate phase)

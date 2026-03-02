@@ -44,7 +44,18 @@ Completed: 2026-03-02
 - when-langgraph (018) references the framework field amendment in its profile design section, making it a natural bidirectional connection
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[base-model-quality-matters-more-than-framework-choice-for-agent-capability]] — added [[when-should-langgraph]] as a backward link to base-model-quality (both frameworks share the base model prerequisite); this note also links base-model-quality as its foundational claim
+- Note already referenced by: base-model-quality, crewai-aligns-best, orchestrator-first, when-langgraph via reflect phase
+
+**Gap check:**
+- No additional backward link gaps found; agent-profile-framework-field is well-referenced
+
+**Sibling cross-check:**
+- Coverage sufficient; the schema amendment note is properly positioned
 
 ## /validate
 (to be filled by /validate phase)

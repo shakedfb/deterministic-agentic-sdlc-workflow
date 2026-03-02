@@ -17,7 +17,7 @@ The practical implication is that the catalog should distinguish between agent p
 
 This distinction also connects to testability. Workflows are deterministic and therefore straightforwardly testable. Given input X, the workflow must produce output Y. Agents are probabilistic and require evaluation frameworks, test sets, and success metrics rather than simple input/output assertions. The debugging cost of an agent failure is substantially higher than a workflow failure. Defaulting to agents when workflows suffice multiplies debugging surface without adding value.
 
-The design question before building any component in this vault is explicit: is judgment required, or is this deterministic enough for a workflow? If the answer is workflow, do not build an agent. The catalog documents agents. Workflows are implementation details that support agents but are not themselves agents.
+The design question before building any component in this vault is explicit: is judgment required, or is this deterministic enough for a workflow? If the answer is workflow, do not build an agent. The catalog documents agents. Workflows are implementation details that support agents but are not themselves agents. This creates a three-way decision tree in practice: deterministic → workflow; role-sequential with predictable handoffs → [[CrewAI aligns best with catalog-driven SDLC agent architectures]]; branching or cyclic with runtime-conditional execution → LangGraph.
 
 ---
 

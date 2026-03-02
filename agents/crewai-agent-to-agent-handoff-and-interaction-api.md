@@ -94,7 +94,7 @@ The interaction patterns documented via `interactions:` wiki links in agent prof
 - `[[requirements-analyst-agent]] → [[code-generator-agent]]` maps to `code_task = Task(context=[requirements_task])`
 - A hierarchical crew with a manager orchestrating requirements, code, and review agents maps to `Process.hierarchical` with an orchestrator agent holding `allow_delegation=True`
 
-The choice between sequential and hierarchical mode is a design decision that should be recorded per crew, not per agent. Sequential mode is more predictable and easier to debug; hierarchical mode provides dynamic task routing that suits open-ended workflows where task assignment cannot be predetermined. For SDLC pipelines with known phase boundaries, sequential mode with explicit context dependencies is the lower-risk starting point.
+The choice between sequential and hierarchical mode is a design decision that should be recorded per crew, not per agent. Sequential mode is more predictable and easier to debug; hierarchical mode provides dynamic task routing that suits open-ended workflows where task assignment cannot be predetermined. For SDLC pipelines with known phase boundaries, sequential mode with explicit context dependencies is the lower-risk starting point. For [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], the sequential mode with explicit context dependencies (requirements_task → code_task → test_task → review_task) is the appropriate starting architecture before introducing hierarchical delegation.
 
 ---
 

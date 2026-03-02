@@ -54,7 +54,19 @@ Completed: 2026-03-02
 - The four trigger categories and governance models defined here provide the vocabulary for the `escalation_conditions` schema field in all agent profiles
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — added inline link: escalation taxonomy from [[what are the specific escalation patterns used in production agentic SDLC systems]]
+- [[specific-escalation-patterns]] — added backward links to what-metrics (orchestrator escalation rate) and requirements-analyst-agent (first concrete application)
+
+**Gap check:**
+- requirements-analyst-agent described escalation conditions without linking the taxonomy source; gap closed
+- specific-escalation-patterns didn't reference its metrics counterpart or first concrete implementation; gaps closed
+
+**Sibling cross-check:**
+- escalation-conditions and agentic-sdlc-supervision both link this note via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

@@ -56,7 +56,19 @@ Completed: 2026-03-02
 - can-github-spec-kit (016) directly resolves the format question this note raises, making it a natural extension connection
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[requirements-analyst-agent]] — opening paragraph now links to [[requirements agents must produce a structured spec artifact not just prose notes]] inline
+- [[spec-centric-architecture]] — updated to reference [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] (which resolves the format question this note raises)
+
+**Gap check:**
+- requirements-analyst-agent described the three-file spec without linking the foundational claim; gap closed
+- spec-centric mentioned Spec Kit without linking the format adoption decision; gap closed
+
+**Sibling cross-check:**
+- can-github-spec-kit note already references requirements-agents-must-produce in its Relevant Notes
 
 ## /validate
 (to be filled by /validate phase)

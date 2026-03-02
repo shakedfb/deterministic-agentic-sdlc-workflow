@@ -54,7 +54,19 @@ Completed: 2026-03-02
 - Sibling claims: crewai-handoff (014) is the natural follow-on to the framework recommendation; when-langgraph (018) is the paired decision tree note; base-model-quality (009) is the priority ordering context
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[workflows-are-preferable-to-agents-for-deterministic-sdlc-phases]] — added backward link in three-way decision tree paragraph: deterministic → workflow, role-sequential → CrewAI, branching/cyclic → LangGraph
+- [[optimal-multi-agent-team-size-is-3-to-7-specialized-agents]] — added backward link: 3-7 range as natural operating envelope for CrewAI team modes
+
+**Gap check:**
+- workflows-preferable described the decision logic without linking CrewAI recommendation; gap closed
+- team-size note discussed coordination implications without referencing CrewAI framework; gap closed
+
+**Sibling cross-check:**
+- phased-rollout now references CrewAI via inline link added for context
 
 ## /validate
 (to be filled by /validate phase)

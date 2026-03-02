@@ -53,7 +53,18 @@ Completed: 2026-03-02
 - This note is now referenced by both [[CrewAI aligns best with catalog-driven SDLC agent architectures]] and [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] as a shared constraint (both framework options require a capable base model)
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[when-should-langgraph-be-chosen-over-crewai-for-an-sdlc-agent-team]] — added backward link to base-model-quality (already linked in reflect phase, confirmed present)
+
+**Gap check:**
+- base-model-quality note is now referenced FROM when-langgraph (added in reflect phase for that note)
+- No additional gaps found; note already well-linked via reflect phase connections
+
+**Sibling cross-check:**
+- crewai-aligns-best, orchestrator-first, minimal-viable-set, agent-profile-framework-field all link this note via reflect phase
 
 ## /validate
 (to be filled by /validate phase)

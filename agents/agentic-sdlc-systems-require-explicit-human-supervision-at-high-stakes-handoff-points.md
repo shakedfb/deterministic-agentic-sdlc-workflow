@@ -28,6 +28,7 @@ The catalog-level implication is that `escalation_conditions` should be treated 
 - [[agent profiles must include escalation conditions as a required design field]] — the operational consequence of this constraint: escalation conditions must be a required schema field, not an optional one
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural escalation routing layer; it receives agent signals and determines whether to proceed autonomously or surface to a human
 - [[workflows are preferable to agents for deterministic SDLC phases]] — the agent-vs-workflow distinction overlaps with the supervision question: deterministic workflow phases can be gated without human involvement; agent-mediated judgment phases are where supervision conditions matter most
+- [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — LangGraph's conditional edge model enables encoding supervision gates as first-class graph nodes; the framework choice has direct implications for how human supervision checkpoints are implemented in the execution graph
 
 **Topics:**
 - [[agent-registry]]

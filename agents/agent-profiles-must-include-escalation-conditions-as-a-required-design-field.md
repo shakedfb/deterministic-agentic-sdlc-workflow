@@ -33,6 +33,7 @@ This is the operational counterpart to the structural claim in [[agentic SDLC sy
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural routing layer for escalation signals from specialist agents; escalation conditions at the specialist level feed into the orchestrator's supervision protocol
 - [[agent profile framework field should capture both orchestration framework and base model]] — a parallel schema completeness argument: just as model selection is a required undocumented design decision, escalation conditions are a required undocumented operational boundary
 - [[what are the specific escalation patterns used in production agentic SDLC systems]] — provides the specific taxonomy (confidence threshold, ambiguity detection, irreversibility gate, loop termination) and governance models (HITL/HOTL) that populate the `escalation_conditions` field with actionable content rather than placeholders
+- [[what does a minimum viable Requirements Analyst Agent prompt look like and how does it produce a structured spec]] — the Requirements Analyst Agent is the first concrete implementation of escalation conditions in the vault; its four explicit escalation triggers (scope ambiguity, implied security constraints, system overlap, irreversible data model decisions) demonstrate how `escalation_conditions` translates from schema requirement to prompt design
 
 **Topics:**
 - [[agent-registry]]

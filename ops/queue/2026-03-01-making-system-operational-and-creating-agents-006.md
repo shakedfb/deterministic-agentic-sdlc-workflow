@@ -45,7 +45,19 @@ Completed: 2026-03-02
 - This note's three-way decision (deterministic→workflow, role-sequential→CrewAI, branching/cyclic→LangGraph) is now explicitly referenced in [[when should LangGraph be chosen over CrewAI for an SDLC agent team]]
 
 ## /refine
-(to be filled by /refine phase)
+
+Completed: 2026-03-02
+
+**Backward pass (OLDER notes updated to reference THIS note):**
+- [[crewai-aligns-best-with-catalog-driven-sdlc-agent-architectures]] — added inline link to phased rollout in context of incremental crew member addition
+- Note already referenced by: when-langgraph (three-way decision), agentic-sdlc-supervision
+
+**Gap check:**
+- crewai-aligns-best described phased agent integration without linking phased-rollout note; gap closed
+
+**Sibling cross-check:**
+- optimal-team-size note doesn't need this link (different concern)
+- Coverage is sufficient
 
 ## /validate
 (to be filled by /validate phase)

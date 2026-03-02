@@ -24,8 +24,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-001.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-002
     type: claim
@@ -35,8 +35,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-002.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-003
     type: claim
@@ -46,8 +46,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-003.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-004
     type: claim
@@ -57,8 +57,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-004.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-005
     type: claim
@@ -68,8 +68,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-005.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-006
     type: claim
@@ -79,8 +79,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-006.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-007
     type: claim
@@ -90,8 +90,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-007.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-008
     type: claim
@@ -101,8 +101,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-008.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-009
     type: claim
@@ -112,8 +112,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-009.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-010
     type: claim
@@ -123,8 +123,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-010.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-011
     type: claim
@@ -134,8 +134,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-011.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-012
     type: claim
@@ -145,8 +145,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-012.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-013
     type: claim
@@ -156,8 +156,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-013.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-014
     type: claim
@@ -167,8 +167,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-014.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-015
     type: claim
@@ -178,8 +178,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-015.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-016
     type: claim
@@ -189,8 +189,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-016.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-017
     type: claim
@@ -200,8 +200,8 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-017.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
 
   - id: claim-018
     type: claim
@@ -211,5 +211,5 @@ tasks:
     batch: 2026-03-01-making-system-operational-and-creating-agents
     file: "2026-03-01-making-system-operational-and-creating-agents-018.md"
     created: "2026-03-01T17:30:00Z"
-    current_phase: reweave
-    completed_phases: [create, reflect]
+    current_phase: verify
+    completed_phases: [create, reflect, reweave]
