@@ -26,7 +26,8 @@ CLOSED — explicit reasoning in source
 - [[spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems]]
 
 ## Create
-(filled by create phase)
+Created: agents/token-cost-of-lossless-context-transfer-is-justified-by-the-failure-cost-of-context-stripping.md
+Note title: "token cost of lossless context transfer is justified by the failure cost of context stripping"
 
 ## Reflect
 (filled by reflect phase)
