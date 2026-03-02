@@ -27,7 +27,8 @@ CLOSED — explicit architectural pattern described in source
 - [[workflows-are-preferable-to-agents-for-deterministic-sdlc-phases]]
 
 ## Create
-(filled by create phase)
+Created: agents/hybrid-sequential-hierarchical-orchestration-gives-predictable-flow-with-dynamic-error-handling.md
+Note title: "hybrid sequential-hierarchical orchestration gives predictable flow with dynamic error handling"
 
 ## Reflect
 (filled by reflect phase)
