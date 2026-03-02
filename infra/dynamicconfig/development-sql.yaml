@@ -1,0 +1,4 @@
+# Temporal dynamic config for local development — empty is valid.
+# Add overrides here as needed, e.g.:
+# system.forceSearchAttributesCacheRefreshOnRead:
+#   - value: true
