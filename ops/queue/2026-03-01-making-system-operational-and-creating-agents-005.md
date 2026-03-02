@@ -20,7 +20,20 @@ Semantic neighbor: null — no framework comparison note exists yet.
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/crewai-aligns-best-with-catalog-driven-sdlc-agent-architectures.md`
+
+Note title: CrewAI aligns best with catalog-driven SDLC agent architectures
+Path: agents/crewai-aligns-best-with-catalog-driven-sdlc-agent-architectures.md
+Word count: ~420 words (body)
+Status: complete
+
+Key content:
+- Explains why CrewAI's role-based team primitive structurally aligns with catalog-driven agent design (roles defined before implementation)
+- Contrasts LangGraph (graph-based conditional branching) and Google ADK (cloud-coupled) to show they address different problems
+- Argues that vault schema fields (current_prompt, responsibilities, interactions) map directly to CrewAI agent definitions — catalog as pre-implementation spec
+- Clarifies the boundary condition: CrewAI for team-level orchestration, LangGraph reserved for agents with fundamentally conditional internal workflows
+- Connected to: [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[spec-centric architecture is the most reliable pattern for agents building systems]]
 
 ## /map
 (to be filled by /map phase)
