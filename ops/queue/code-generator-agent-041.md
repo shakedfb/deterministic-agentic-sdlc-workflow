@@ -26,13 +26,16 @@ OPEN — v2 design hypothesis; pattern is common in production code generation s
 - [[base-model-quality-matters-more-than-framework-choice-for-agent-capability]] (context: language-agnostic prompts may already leverage base model's language-specific training; project_config provides guardrails rather than compensating for base model gaps)
 
 ## Create
-(filled by create phase)
+Created: agents/language-agnostic-code-generation-prompts-require-a-project-config-parameter-to-specialize-for-framework-and-toolchain-without-prompt-rewrites.md
 
 ## Reflect
-(filled by reflect phase)
+Connections mapped (3): base-model-quality, crewai-alignment, test-awareness gap (040)
+No existing notes reference project_config pattern — new hypothesis
+Articulation test: PASS
 
 ## Reweave
-(filled by reweave phase)
+No reweave edits needed (new open hypothesis)
 
 ## Verify
-(filled by verify phase)
+**Verified:** 2026-03-02T00:00:00Z
+Overall: PASS (open hypothesis — falsification criteria documented)

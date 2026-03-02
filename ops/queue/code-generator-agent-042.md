@@ -28,13 +28,19 @@ New content to add to agents/intelligent-context-windowing-is-needed-when-spec-a
 - [[code-generator-agent]] — the Code Generator's v2 context selection problem is the specialist-level analog; should be added to Relevant Notes
 
 ## Enrich
-(filled by enrich phase)
+Note already contained specialist-level description from prior orchestrator-agent batch enrichment.
+Added to topics: development-phase
+Updated source field: enriched from [[code-generator-agent]]
+Added new Relevant Notes connections: single-task-per-invocation (limits context demand), implementation-report (may itself require windowing)
+Updated Topics footer to include [[development-phase]]
 
 ## Reflect
-(filled by reflect phase)
+Specialist-level windowing analog is already documented; new connections add development-phase context
+Articulation test: PASS
 
 ## Reweave
-(filled by reweave phase)
+Updated intelligent-context-windowing-is-needed-when-spec-artifacts-exceed-the-context-window.md
 
 ## Verify
-(filled by verify phase)
+**Verified:** 2026-03-02T00:00:00Z
+Overall: PASS

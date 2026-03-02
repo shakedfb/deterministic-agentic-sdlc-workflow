@@ -511,34 +511,37 @@ tasks:
 
   - id: claim-041
     type: claim
-    status: pending
+    status: done
     target: "language-agnostic code generation prompts require a project_config parameter to specialize for framework and toolchain without prompt rewrites"
     classification: open
     batch: code-generator-agent
     file: "code-generator-agent-041.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: create
-    completed_phases: []
+    current_phase: null
+    completed_phases: [create, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-042
     type: enrichment
-    status: pending
+    status: done
     target: "intelligent-context-windowing-is-needed-when-spec-artifacts-exceed-the-context-window"
     batch: code-generator-agent
     file: "code-generator-agent-042.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: enrich
-    completed_phases: []
+    current_phase: null
+    completed_phases: [enrich, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-043
     type: enrichment
-    status: pending
+    status: done
     target: "specific-escalation-patterns-in-production-agentic-sdlc-systems"
     batch: code-generator-agent
     file: "code-generator-agent-043.md"
     created: "2026-03-02T00:00:00Z"
-    current_phase: enrich
-    completed_phases: []
+    current_phase: null
+    completed_phases: [enrich, reflect, reweave, verify]
+    completed: "2026-03-02T00:00:00Z"
 
   - id: claim-044
     type: claim

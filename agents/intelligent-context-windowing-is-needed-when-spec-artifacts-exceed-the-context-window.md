@@ -1,7 +1,7 @@
 ---
 description: When spec artifacts grow large enough to exceed context window limits, lossless full-spec transfer at every handoff becomes physically impossible, requiring a v2 solution of intelligent windowing — full spec on first task, then only deltas and relevant sections for subsequent tasks — though this adds orchestrator complexity that is deferred until the baseline is validated.
-topics: ["[[agent-registry]]", "[[design-phase]]"]
-source: "[[orchestrator-agent]]"
+topics: ["[[agent-registry]]", "[[design-phase]]", "[[development-phase]]"]
+source: "[[orchestrator-agent]]"; enriched from [[code-generator-agent]]
 classification: open
 ---
 
@@ -30,7 +30,10 @@ The windowing problem is not limited to the orchestrator-level handoff. The same
 - [[token cost of lossless context transfer is justified by the failure cost of context stripping]] — the economic argument that makes intelligent windowing preferable to arbitrary stripping; windowing is structured and conservative, stripping is arbitrary; the economic argument applies to both
 - [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — delegation success rate falling below 85% is partly traced to incomplete context transfer; this metric is the observable trigger that signals when windowing has become necessary, giving "when spec size first causes handoff failures" a measurable definition
 - [[code-generator-agent]] — the Code Generator's v2 context selection problem (prior code accumulation exceeding context windows) is the specialist-level analog of this orchestrator-level windowing problem; both require relevance-filtered delivery keyed to component dependencies, revealing that windowing is a pipeline-wide pattern, not an orchestrator-only concern
+- [[single-task-per-invocation-is-the-correct-scope-discipline-for-reliable-code-generation-agents]] — single-task invocation limits per-invocation context window demand; without it, each invocation would need the full accumulated code set, accelerating the point at which windowing becomes necessary
+- [[the-implementation-report-is-the-structured-handoff-artifact-that-enables-orchestrator-routing-decisions-after-code-generation]] — for large projects, the IMPLEMENTATION REPORT (including prior code references) can itself become large, suggesting the same windowing principles that apply to spec transfer may need to apply to report contents at development phase boundaries
 
 **Topics:**
 - [[agent-registry]]
 - [[design-phase]]
+- [[development-phase]]
