@@ -37,7 +37,23 @@ Key content:
 - Connects to: [[spec-centric architecture is the most reliable pattern for agents building systems]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[agent profiles must include escalation conditions as a required design field]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOCs updated:**
+- Added to [[design-phase]] and [[requirements-phase]] Core Ideas sections
+
+**New connection added:**
+- -> [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] — extends: resolves the open question of what format the structured spec takes; the spec format question raised here is now answered by that note
+
+**Existing connections reviewed:**
+- [[spec-centric architecture is the most reliable pattern for agents building systems]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[agent profiles must include escalation conditions as a required design field]] — all well-articulated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overviews read: [[requirements-phase]], [[design-phase]]
+- can-github-spec-kit (016) directly resolves the format question this note raises, making it a natural extension connection
 
 ## /refine
 (to be filled by /refine phase)

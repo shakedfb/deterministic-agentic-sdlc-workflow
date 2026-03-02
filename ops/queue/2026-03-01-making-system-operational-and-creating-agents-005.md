@@ -36,7 +36,22 @@ Key content:
 - Connected to: [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[spec-centric architecture is the most reliable pattern for agents building systems]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**New connections added:**
+- -> [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — grounds: the implementation mechanics (context parameter, TaskOutput, Process modes) translate the framework recommendation to running code
+- -> [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — extends: the complementary decision criterion completing the CrewAI-vs-LangGraph selection tree
+- -> [[base model quality matters more than framework choice for agent capability]] — extends: framework recommendation is conditional on capable base model
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- Sibling claims: crewai-handoff (014) is the natural follow-on to the framework recommendation; when-langgraph (018) is the paired decision tree note; base-model-quality (009) is the priority ordering context
 
 ## /refine
 (to be filled by /refine phase)

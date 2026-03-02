@@ -28,7 +28,23 @@ The note argues that the four-agent specialist set (requirements analyst, code g
 The note links to four related claims already in the vault: optimal team size (5 agents total lands within 3–7 range), orchestrator-first bootstrapping (specialist set is built on top of the orchestrator anchor), spec-centric architecture (requirements agent must produce a structured spec), and phased rollout (this set maps to phases 1 and 2 of the rollout sequence).
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOCs updated:**
+- Added to [[development-phase]] Core Ideas section
+- Added to [[requirements-phase]] Core Ideas section
+- Added to [[testing-phase]] Core Ideas section
+
+**Connections reviewed:**
+- Already linked to [[optimal multi-agent team size is 3 to 7 specialized agents]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[spec-centric architecture is the most reliable pattern for agents building systems]], [[phased rollout prevents coordination chaos when building multi-agent systems]]
+- Coverage is comprehensive; all four existing connections are strong and well-articulated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overviews read: [[requirements-phase]], [[development-phase]], [[testing-phase]]
+- Sibling claims reviewed: this note is already well-connected; the four existing links cover the key dependencies without creating noise
 
 ## /refine
 (to be filled by /refine phase)

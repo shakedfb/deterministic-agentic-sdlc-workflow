@@ -37,7 +37,22 @@ Key content:
 - Connects to: [[requirements-phase]], [[agent-registry]], [[orchestrator-first-bootstrapping-reduces-multi-agent-coordination-failures]], [[the-minimal-viable-agent-set-for-software-building-is-requirements-code-generation-test-generation-and-code-review]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- [[requirements-analyst-agent]] is the created note; it was already added to [[requirements-phase]] by the create phase
+
+**Connections reviewed:**
+- The created note (requirements-analyst-agent.md) uses hyphenated wiki links in the interactions field that may need verification
+- Note is connected to [[requirements-phase]] and [[agent-registry]]
+
+**Articulation test:** PASS — the Requirements Analyst Agent profile is the concrete answer to the open question
+
+**Discovery trace:**
+- Phase overview read: [[requirements-phase]]
+- The agent profile is the resolution of the open question; it documents the MVP prompt with three components: output format contract, escalation conditions, constraint enforcement
+- Note references [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] via the three-file structure grounded in Kiro/GitHub Spec Kit convergence
 
 ## /refine
 (to be filled by /refine phase)

@@ -39,7 +39,23 @@ Key content:
 - Connects to: [[CrewAI aligns best with catalog-driven SDLC agent architectures]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[spec-centric architecture is the most reliable pattern for agents building systems]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**New connection added:**
+- -> [[what are the specific escalation patterns used in production agentic SDLC systems]] — extends: task guardrails map to confidence threshold escalation; hierarchical manager maps to inter-agent conflict escalation; the escalation taxonomy maps to specific CrewAI API primitives
+
+**Existing connections reviewed:**
+- [[CrewAI aligns best with catalog-driven SDLC agent architectures]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[spec-centric architecture is the most reliable pattern for agents building systems]] — all well-articulated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- specific-escalation-patterns (015) is the natural extension: the two notes together provide both the escalation taxonomy and the CrewAI API surface where each trigger type is implemented
 
 ## /refine
 (to be filled by /refine phase)

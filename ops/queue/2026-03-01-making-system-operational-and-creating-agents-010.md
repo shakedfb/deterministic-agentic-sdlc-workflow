@@ -25,7 +25,23 @@ Title: agent profile framework field should capture both orchestration framework
 Status: complete
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**New connection added:**
+- -> [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — extends: when the framework choice is LangGraph rather than CrewAI, the compound `framework` field must capture both the LangGraph execution model and the base model
+
+**Existing connections reviewed:**
+- [[base model quality matters more than framework choice for agent capability]], [[CrewAI aligns best with catalog-driven SDLC agent architectures]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — all well-articulated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- when-langgraph (018) references the framework field amendment in its profile design section, making it a natural bidirectional connection
 
 ## /refine
 (to be filled by /refine phase)

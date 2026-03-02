@@ -20,10 +20,29 @@ Semantic neighbor: null — no existing note on spec-driven agent workflows.
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems.md`
+
+Note title: spec-centric architecture is the most reliable pattern for agents building systems
+Path: agents/spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems.md
+Status: complete (recovered from misplaced file in agents/ directory)
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] and [[requirements-phase]] Core Ideas sections (note's topics include these phases)
+
+**Connections reviewed:**
+- Already linked to [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[requirements agents must produce a structured spec artifact not just prose notes]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]]
+- Existing connections are comprehensive
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overviews read: [[design-phase]], [[requirements-phase]]
+- Sibling claims reviewed: core connections already present; note well-integrated into the spec-centric cluster
 
 ## /refine
 (to be filled by /refine phase)

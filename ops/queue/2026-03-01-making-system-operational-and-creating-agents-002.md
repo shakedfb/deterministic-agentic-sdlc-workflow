@@ -35,7 +35,21 @@ Key content:
 - Links to sibling claims: [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**Connections added:**
+- -> [[phased rollout prevents coordination chaos when building multi-agent systems]] — grounds: the 4-phase rollout produces 5-6 agents by Phase 4, staying within the 3-7 range
+- -> [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — grounds: the coordination overhead scaling research (super-linear at ~1.724) quantifies the mechanism behind the 7-agent upper boundary
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- Sibling claims: added phased-rollout (already listed in others but missing here) and metrics-orchestrator (which quantifies the scaling math behind the 3-7 boundary)
 
 ## /refine
 (to be filled by /refine phase)

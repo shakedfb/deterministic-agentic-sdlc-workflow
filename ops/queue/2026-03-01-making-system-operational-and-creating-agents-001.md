@@ -34,7 +34,24 @@ Key content:
 - Concrete vault implication: Orchestrator Agent profile should be designed first
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**Connections added:**
+- -> [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — extends: once orchestrator is built first, these four signal categories verify it is functioning correctly
+- -> [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — grounds: orchestrator-first principle maps to CrewAI hierarchical process with manager agent
+- Inline link added: [[phased rollout prevents coordination chaos when building multi-agent systems]] in body
+- Inline link added: [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] in body
+
+**Articulation test:** PASS — all connections specify the mechanism of the relationship
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]] — orchestrator-first is the foundational design principle
+- Grep: "orchestrator" across agents/ — identified connections to metrics note, crewai-handoff note
+- Sibling claims reviewed: [[optimal multi-agent team size is 3 to 7 specialized agents]], [[phased rollout prevents coordination chaos when building multi-agent systems]] already linked; added metrics and crewai-handoff as new connections
 
 ## /refine
 (to be filled by /refine phase)

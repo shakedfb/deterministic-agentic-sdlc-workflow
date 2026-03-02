@@ -13,7 +13,13 @@ Agents in this phase generate test cases, execute tests, and validate that imple
 
 ## Agents in This Phase
 
-(Add agents here as they're created)
+Research claims relevant to testing-phase agents:
+
+- [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — establishes test generation as a core testing-phase agent in the minimal viable set; it closes the build loop by providing automated verification against the structured spec
+
+## Gaps
+
+- Test Generation Agent profile not yet designed
 
 ## Inputs
 

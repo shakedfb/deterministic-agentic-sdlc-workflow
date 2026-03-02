@@ -37,7 +37,23 @@ Key content:
 - Links to [[phased rollout prevents coordination chaos when building multi-agent systems]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], and [[agent profile framework field should capture both orchestration framework and base model]] as parallel schema completeness and escalation routing context
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**New connection added:**
+- -> [[what are the specific escalation patterns used in production agentic SDLC systems]] — extends: provides the specific trigger taxonomy and governance models (HITL/HOTL) that populate the `escalation_conditions` field with actionable content
+
+**Existing connections reviewed:**
+- [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[phased rollout prevents coordination chaos when building multi-agent systems]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[agent profile framework field should capture both orchestration framework and base model]] — all well-articulated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- specific-escalation-patterns (015) was the natural follow-on that fills the schema field with concrete vocabulary
 
 ## /refine
 (to be filled by /refine phase)

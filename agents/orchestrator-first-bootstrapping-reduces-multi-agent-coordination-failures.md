@@ -13,7 +13,9 @@ The orchestrator serves as the anchor for everything downstream. It maintains pr
 
 This principle connects directly to [[optimal multi-agent team size is 3 to 7 specialized agents]]: even a minimal 3-agent team requires the orchestrator as one of its members, or the remaining two agents operate in isolation. The orchestrator is not optional overhead — it is the enabling condition for agent coordination at any scale.
 
-In practice, the orchestrator-first constraint simplifies the bootstrapping decision. Rather than asking which specialist to build first (requirements? code generation? review?), the answer is always: build the orchestrator. Once it exists, specialists can be added incrementally and the coordination layer is already in place to integrate them. This also aligns with phased rollout patterns that warn against simultaneous agent deployment — each phase starts with the orchestrator already operational.
+In practice, the orchestrator-first constraint simplifies the bootstrapping decision. Rather than asking which specialist to build first (requirements? code generation? review?), the answer is always: build the orchestrator. Once it exists, specialists can be added incrementally and the coordination layer is already in place to integrate them. This also aligns with [[phased rollout prevents coordination chaos when building multi-agent systems]] patterns that warn against simultaneous agent deployment — each phase starts with the orchestrator already operational.
+
+After the orchestrator is built, its health is verifiable: [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] defines four signal categories (delegation success rate, specialist utilization balance, coordination overhead ratio, error containment factor) that confirm the orchestrator is functioning as a coordinator rather than itself becoming a bottleneck.
 
 The implication for this vault is concrete: the Orchestrator Agent profile should be the first formally designed agent. Subsequent profiles for requirements, code generation, and review agents are all downstream of that anchor.
 
@@ -24,6 +26,8 @@ The implication for this vault is concrete: the Orchestrator Agent profile shoul
 **Relevant Notes:**
 - [[optimal multi-agent team size is 3 to 7 specialized agents]] — team sizing research that confirms the orchestrator occupies one of the core slots in any viable team
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — the phased rollout pattern depends on the orchestrator being stable before specialists are added
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — once the orchestrator is built first, these four signal categories are how you verify it is functioning as a coordinator rather than a bottleneck
+- [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — the orchestrator-first principle maps directly to CrewAI's hierarchical process: the orchestrator is the manager agent that routes work to specialists
 
 **Topics:**
 - [[agent-registry]]

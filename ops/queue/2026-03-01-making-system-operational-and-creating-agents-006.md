@@ -20,10 +20,29 @@ Semantic neighbor: null — no note on agent vs. workflow decision criteria exis
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/workflows-are-preferable-to-agents-for-deterministic-sdlc-phases.md`
+
+Note title: workflows are preferable to agents for deterministic SDLC phases
+Path: agents/workflows-are-preferable-to-agents-for-deterministic-sdlc-phases.md
+Status: complete
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOCs updated:**
+- Added to [[design-phase]], [[development-phase]], [[deployment-phase]], [[operations-phase]] Core Ideas sections
+
+**Connections reviewed:**
+- Already linked to [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[spec-centric architecture is the most reliable pattern for agents building systems]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]]
+- Existing connections are comprehensive for this note
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overviews read: [[design-phase]], [[deployment-phase]], [[operations-phase]]
+- This note's three-way decision (deterministic→workflow, role-sequential→CrewAI, branching/cyclic→LangGraph) is now explicitly referenced in [[when should LangGraph be chosen over CrewAI for an SDLC agent team]]
 
 ## /refine
 (to be filled by /refine phase)

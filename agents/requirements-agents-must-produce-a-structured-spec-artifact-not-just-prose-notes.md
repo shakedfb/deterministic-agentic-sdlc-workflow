@@ -28,6 +28,7 @@ For this vault, this means the Requirements Analyst Agent profile must specify b
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the 4-agent set that depends on requirements output being a structured artifact; code generation, test generation, and review are all downstream consumers of the spec
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator-first principle parallels the spec-format-first principle: both are prerequisite infrastructure that must exist before downstream components can be validly designed
 - [[agent profiles must include escalation conditions as a required design field]] — a parallel completeness argument for agent schema: just as escalation conditions are a required undocumented field, the spec output format is a required undocumented design decision in the requirements agent profile
+- [[can GitHub Spec Kit format be adopted as the canonical spec artifact format for this vault]] — resolves the open question of what format the structured spec takes: Spec Kit's section taxonomy for requirements.md with EARS syntax and interface contracts as extensions; the spec format question raised here is now answered
 
 **Topics:**
 - [[agent-registry]]

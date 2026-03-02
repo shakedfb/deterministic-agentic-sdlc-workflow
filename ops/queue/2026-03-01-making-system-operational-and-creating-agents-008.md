@@ -37,7 +37,21 @@ Key content:
 - Connects to [[agent profiles must include escalation conditions as a required design field]] — the operational consequence of this structural principle
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOCs updated:**
+- Added to [[design-phase]], [[operations-phase]], [[deployment-phase]] Core Ideas sections
+
+**Connections reviewed:**
+- Already linked to [[phased rollout prevents coordination chaos when building multi-agent systems]], [[agent profiles must include escalation conditions as a required design field]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[workflows are preferable to agents for deterministic SDLC phases]]
+- Comprehensive coverage; note is well-integrated
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overviews read: [[design-phase]], [[operations-phase]], [[deployment-phase]]
+- This note is a hub for the escalation cluster; downstream notes (escalation-conditions, escalation-patterns) both link back to it
 
 ## /refine
 (to be filled by /refine phase)

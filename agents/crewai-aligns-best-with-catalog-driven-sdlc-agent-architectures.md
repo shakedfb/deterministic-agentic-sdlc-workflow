@@ -27,6 +27,9 @@ The comparison also clarifies when CrewAI is the wrong choice. If an SDLC workfl
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — CrewAI's crew and task delegation model requires an orchestrator-style coordinator; the framework choice reinforces the orchestrator-first bootstrapping sequence
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — the 4-agent specialist set maps directly to CrewAI crew members with defined roles, goals, and inter-agent task dependencies
 - [[spec-centric architecture is the most reliable pattern for agents building systems]] — in CrewAI, the structured spec artifact produced by the requirements agent becomes the shared context passed through task delegation to downstream agents
+- [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — the implementation mechanics of this recommendation: the context parameter, TaskOutput schema contracts, and Process modes translate the catalog's interaction links to running code
+- [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — the complementary decision criterion; together the two notes form a complete framework selection tree: CrewAI as default, LangGraph for conditional/cyclic workflows
+- [[base model quality matters more than framework choice for agent capability]] — the framework recommendation assumes a capable base model; CrewAI's role-based structure does not compensate for weak model quality
 
 **Topics:**
 - [[agent-registry]]

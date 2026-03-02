@@ -36,7 +36,21 @@ Created: [[base-model-quality-matters-more-than-framework-choice-for-agent-capab
 **Topics assigned:** [[agent-registry]], [[design-phase]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOC updated:**
+- Added to [[design-phase]] Core Ideas section
+
+**Connections reviewed:**
+- Already linked to [[agent profile framework field should capture both orchestration framework and base model]], [[CrewAI aligns best with catalog-driven SDLC agent architectures]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]]
+- Coverage is comprehensive
+
+**Articulation test:** PASS
+
+**Discovery trace:**
+- Phase overview read: [[design-phase]]
+- This note is now referenced by both [[CrewAI aligns best with catalog-driven SDLC agent architectures]] and [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] as a shared constraint (both framework options require a capable base model)
 
 ## /refine
 (to be filled by /refine phase)

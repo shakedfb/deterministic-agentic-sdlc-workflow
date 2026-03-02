@@ -26,6 +26,8 @@ This sizing constraint also interacts with [[orchestrator-first bootstrapping re
 **Relevant Notes:**
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator occupies one of the core team slots; sizing and bootstrapping order are coupled constraints
 - [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — a 4-agent specialist set plus orchestrator lands at 5, within the optimal range
+- [[phased rollout prevents coordination chaos when building multi-agent systems]] — the four-phase rollout produces a 5-6 agent team by Phase 4, staying within the optimal range
+- [[what metrics distinguish a well-functioning orchestrator from a coordination bottleneck]] — the coordination overhead scaling research (super-linear at exponent ~1.724) quantifies the mechanism behind the 7-agent upper boundary
 
 **Topics:**
 - [[agent-registry]]

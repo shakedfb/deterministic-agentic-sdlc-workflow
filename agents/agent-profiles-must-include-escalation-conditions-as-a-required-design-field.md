@@ -32,6 +32,7 @@ This is the operational counterpart to the structural claim in [[agentic SDLC sy
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — the phased rollout builds human review checkpoints into each phase boundary; those checkpoints are the escalation conditions at the system level, and per-agent escalation conditions are their granular implementation
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural routing layer for escalation signals from specialist agents; escalation conditions at the specialist level feed into the orchestrator's supervision protocol
 - [[agent profile framework field should capture both orchestration framework and base model]] — a parallel schema completeness argument: just as model selection is a required undocumented design decision, escalation conditions are a required undocumented operational boundary
+- [[what are the specific escalation patterns used in production agentic SDLC systems]] — provides the specific taxonomy (confidence threshold, ambiguity detection, irreversibility gate, loop termination) and governance models (HITL/HOTL) that populate the `escalation_conditions` field with actionable content rather than placeholders
 
 **Topics:**
 - [[agent-registry]]

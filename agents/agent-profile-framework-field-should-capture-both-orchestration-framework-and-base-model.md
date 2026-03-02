@@ -25,6 +25,7 @@ This amendment also has an ordering implication for the design process. When dra
 - [[base model quality matters more than framework choice for agent capability]] — the foundational claim that motivates this schema change: model selection is the higher-priority design decision, so the schema must capture it
 - [[CrewAI aligns best with catalog-driven SDLC agent architectures]] — framework selection is still a meaningful decision documented here; the schema amendment ensures both framework and model are co-documented
 - [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator carries the highest reasoning load and has the most consequential base model requirement; this schema amendment ensures that requirement is explicitly captured in its profile
+- [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — when the framework choice is LangGraph rather than CrewAI for a specific agent, the compound `framework` field must capture that distinction; the schema amendment applies to both framework options
 
 **Topics:**
 - [[agent-registry]]

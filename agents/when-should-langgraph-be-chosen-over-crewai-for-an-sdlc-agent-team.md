@@ -43,8 +43,9 @@ Agent profiles in this vault do not need to choose one framework or the other at
 
 **Relevant Notes:**
 - [[CrewAI aligns best with catalog-driven SDLC agent architectures]] — this note establishes the default choice; the present note specifies the decision criterion that tips to LangGraph, making the two notes together a complete framework selection decision tree
-- [[workflows-are-preferable-to-agents-for-deterministic-sdlc-phases]] — the same determinism principle that distinguishes agents from workflows also distinguishes CrewAI (predetermined execution path) from LangGraph (runtime-conditional execution); the three-way decision is: deterministic → workflow, role-sequential → CrewAI, branching/cyclic → LangGraph
-- [[orchestrator-first bootstrapping reduces-multi-agent-coordination-failures]] — the orchestrator is the natural layer where LangGraph's conditional routing applies; specialist agents remain role-defined in CrewAI while the orchestrator's routing logic benefits from LangGraph's graph model
+- [[workflows are preferable to agents for deterministic SDLC phases]] — the same determinism principle that distinguishes agents from workflows also distinguishes CrewAI (predetermined execution path) from LangGraph (runtime-conditional execution); the three-way decision is: deterministic → workflow, role-sequential → CrewAI, branching/cyclic → LangGraph
+- [[orchestrator-first bootstrapping reduces multi-agent coordination failures]] — the orchestrator is the natural layer where LangGraph's conditional routing applies; specialist agents remain role-defined in CrewAI while the orchestrator's routing logic benefits from LangGraph's graph model
+- [[base model quality matters more than framework choice for agent capability]] — both LangGraph and CrewAI have this constraint in common: the framework selection decision is downstream of model selection, and neither framework compensates for a weak base model
 
 **Topics:**
 - [[agent-registry]]

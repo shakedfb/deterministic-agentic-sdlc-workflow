@@ -13,7 +13,15 @@ Agents in this phase generate code, conduct code reviews, and ensure implementat
 
 ## Agents in This Phase
 
-(Add agents here as they're created)
+Research claims relevant to development-phase agents:
+
+- [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]] — establishes code generation and code review as core development-phase agents in the minimal viable set
+- [[workflows are preferable to agents for deterministic SDLC phases]] — the design gate for development tooling: linting, formatting, and dependency scanning are workflow territory; code generation and review require agent judgment
+
+## Gaps
+
+- Code Generation Agent profile not yet designed (awaiting spec format confirmation — now resolved)
+- Code Review Agent profile not yet designed
 
 ## Inputs
 

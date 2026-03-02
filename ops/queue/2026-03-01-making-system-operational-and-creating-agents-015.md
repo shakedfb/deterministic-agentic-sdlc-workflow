@@ -37,7 +37,21 @@ Key content:
 - Connects to: [[agent profiles must include escalation conditions as a required design field]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]]
 
 ## /map
-(to be filled by /map phase)
+
+Completed: 2026-03-02
+
+**Phase overview MOCs updated:**
+- Added to [[design-phase]] and [[operations-phase]] Core Ideas sections
+
+**Connections reviewed:**
+- Already linked to [[agent profiles must include escalation conditions as a required design field]], [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]]
+- Coverage is comprehensive; this is a hub note for the escalation cluster
+
+**Articulation test:** PASS — this note and escalation-conditions (011) form a clear pair: 011 establishes the schema requirement, 015 fills it with actionable vocabulary
+
+**Discovery trace:**
+- Phase overviews read: [[design-phase]], [[operations-phase]]
+- The four trigger categories and governance models defined here provide the vocabulary for the `escalation_conditions` schema field in all agent profiles
 
 ## /refine
 (to be filled by /refine phase)
