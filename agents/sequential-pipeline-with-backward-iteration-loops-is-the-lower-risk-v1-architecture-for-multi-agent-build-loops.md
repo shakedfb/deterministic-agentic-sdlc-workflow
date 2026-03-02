@@ -24,6 +24,7 @@ CrewAI's `Process.sequential` mode implements this pattern natively. The recomme
 **Source:** [[orchestrator-agent]]
 
 **Relevant Notes:**
+- [[single-task-per-invocation-is-the-correct-scope-discipline-for-reliable-code-generation-agents]] — single-task invocation at the specialist level is the implementation complement of the sequential pipeline at the orchestrator level; both enforce narrow, bounded scopes that make failure attribution possible
 - [[how does CrewAI handle agent-to-agent handoff and what does its interaction API look like]] — sequential pipeline maps to `Process.sequential` with explicit context dependencies; this is the specific CrewAI configuration for v1 SDLC pipelines
 - [[when should LangGraph be chosen over CrewAI for an SDLC agent team]] — when backward iteration loops become conditional branching at runtime, LangGraph's conditional edge model becomes necessary; sequential CrewAI is the precursor that reveals whether that complexity is required
 - [[phased rollout prevents coordination chaos when building multi-agent systems]] — phased rollout follows a sequential logic analogous to the sequential pipeline: each phase is validated before the next is introduced

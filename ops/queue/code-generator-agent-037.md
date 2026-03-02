@@ -27,13 +27,37 @@ CLOSED — asserted as settled design principle in the Code Generator Agent v1 d
 - [[the-orchestrator-agents-role-is-routing-and-validation-not-content-generation]] (depends on: task sequencing is the orchestrator's responsibility, freeing code generator for focused execution)
 
 ## Create
-(filled by create phase)
+Created: agents/single-task-per-invocation-is-the-correct-scope-discipline-for-reliable-code-generation-agents.md
+Note title: "single-task-per-invocation is the correct scope discipline for reliable code generation agents"
 
 ## Reflect
-(filled by reflect phase)
+Phase map interaction complete (2026-03-02). Connections mapped:
+- hard-iteration-limits-per-task-are-required-to-prevent-runaway-loops-in-multi-agent-pipelines (enables enforcement)
+- sequential-pipeline-with-backward-iteration-loops-is-the-lower-risk-v1-architecture-for-multi-agent-build-loops (specialist complement)
+- the-orchestrator-agents-role-is-routing-and-validation-not-content-generation (depends on: orchestrator owns sequencing)
+- the-implementation-report-is-the-structured-handoff-artifact (per-task scope → per-task report → clean routing signal)
+- spec-centric-architecture-is-the-most-reliable-pattern-for-agents-building-systems (enables: spec removes need for batch context)
+
+Backlinks added to:
+- hard-iteration-limits: added single-task note as prerequisite for enforceable per-task limits
+- sequential-pipeline: added single-task note as specialist-level complement
+
+Articulation test: PASS
 
 ## Reweave
-(filled by reweave phase)
+Updated agents/hard-iteration-limits-per-task-are-required-to-prevent-runaway-loops-in-multi-agent-pipelines.md — added [[single-task-per-invocation]] to Relevant Notes
+Updated agents/sequential-pipeline-with-backward-iteration-loops-is-the-lower-risk-v1-architecture-for-multi-agent-build-loops.md — added [[single-task-per-invocation]] to Relevant Notes
 
 ## Verify
-(filled by verify phase)
+**Verified:** 2026-03-02T00:00:00Z
+
+Recite:
+- Prediction: 5/5 — description fully captured the argument (single-task = narrow scope, diagnosable failures, fast iteration, enforceable limits)
+- Description: kept — 168 chars, adds mechanism
+- Required fields: PASS
+- Topics: PASS
+- Composability: PASS
+- Phase overview connection: development-phase
+- Wiki links: 5 outgoing — PASS
+
+Overall: PASS

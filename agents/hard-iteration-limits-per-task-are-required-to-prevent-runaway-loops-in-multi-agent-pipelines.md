@@ -24,6 +24,7 @@ The hard limit is also the precise mechanism that makes the orchestrator's "esca
 **Source:** [[orchestrator-agent]]
 
 **Relevant Notes:**
+- [[single-task-per-invocation-is-the-correct-scope-discipline-for-reliable-code-generation-agents]] — single-task invocation makes per-task iteration limits enforceable; without a single bounded scope per invocation, the "per task" in "per-task limits" has no meaningful unit
 - [[what are the specific escalation patterns used in production agentic SDLC systems]] — loop termination is one of the four escalation trigger categories; hard limits are the mechanism that triggers it; the note classifies loop termination escalation as HITL (blocking), providing the governance model that the hard limit principle requires
 - [[agentic SDLC systems require explicit human supervision at high-stakes handoff points]] — hard limits enforce the boundary of agent authority; when the limit is hit, human judgment replaces agent iteration
 - [[the four-phase build loop calibration hypothesis for iteration limits]] — the specific calibration numbers (3 code generation attempts, 2 review cycles) are open hypotheses that the hard limit principle makes testable
