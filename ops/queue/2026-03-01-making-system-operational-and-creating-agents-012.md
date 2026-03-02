@@ -20,7 +20,21 @@ Semantic neighbor: null — no requirements agent output design note exists.
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/requirements-agents-must-produce-a-structured-spec-artifact-not-just-prose-notes.md`
+
+Note title: requirements agents must produce a structured spec artifact not just prose notes
+Path: agents/requirements-agents-must-produce-a-structured-spec-artifact-not-just-prose-notes.md
+Word count: ~370 words (body)
+Status: complete
+
+Key content:
+- Explains why prose notes fail as requirements output: they force uncoordinated interpretive decisions on every downstream agent
+- Establishes structured spec as a shared contract enabling coherent downstream coordination without direct agent-to-agent coupling
+- Grounds the claim in GitHub Spec Kit pattern as the current production-validated approach
+- States the sequencing constraint explicitly: spec format must be agreed upon before any downstream agent is designed
+- Vault implication: Requirements Analyst Agent profile must specify the output format precisely, not just reference "a specification document"
+- Connects to: [[spec-centric architecture is the most reliable pattern for agents building systems]], [[the minimal viable agent set for software-building is requirements, code generation, test generation, and code review]], [[orchestrator-first bootstrapping reduces multi-agent coordination failures]], [[agent profiles must include escalation conditions as a required design field]]
 
 ## /map
 (to be filled by /map phase)
