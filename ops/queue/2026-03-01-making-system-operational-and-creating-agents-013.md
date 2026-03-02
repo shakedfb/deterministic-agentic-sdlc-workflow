@@ -20,7 +20,21 @@ Semantic neighbor: null — connects to claims 004 (spec-centric architecture) a
 ---
 
 ## Create
-(to be filled by create phase)
+
+Created: `agents/requirements-analyst-agent.md`
+
+Note title: Requirements Analyst Agent
+Path: agents/requirements-analyst-agent.md
+Word count: ~950 words (body + prompt)
+Status: complete
+
+Key content:
+- Answers the open question: defines a minimum viable prompt structure with three components — output format contract, explicit escalation conditions, and constraint enforcement
+- Defines the three-file spec artifact (requirements.md, design.md, tasks.md) grounded in AWS Kiro and GitHub Spec Kit convergence
+- Provides the complete system prompt text including EARS format requirements, section templates, four escalation conditions, three hard constraints, and SPEC COMPLETE handoff protocol
+- Establishes measurable metrics: acceptance criteria testability rate, downstream first-pass test success (target >70%), escalation rate (target <20%), task atomicity target (15-45 min per task)
+- Status: draft (v1 based on research synthesis, not yet production-tested)
+- Connects to: [[requirements-phase]], [[agent-registry]], [[orchestrator-first-bootstrapping-reduces-multi-agent-coordination-failures]], [[the-minimal-viable-agent-set-for-software-building-is-requirements-code-generation-test-generation-and-code-review]]
 
 ## /map
 (to be filled by /map phase)

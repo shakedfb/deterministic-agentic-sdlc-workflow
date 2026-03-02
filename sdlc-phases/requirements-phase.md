@@ -13,7 +13,7 @@ The requirements phase transforms raw user needs into structured specifications 
 
 ## Agents in This Phase
 
-(Add agents here as they're created)
+- [[requirements-analyst-agent]] — translates raw user intent into a three-file structured spec (requirements.md, design.md, tasks.md); first specialist in the build loop
 
 ## Inputs
 
