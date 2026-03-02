@@ -26,7 +26,8 @@ CLOSED — explicit design constraint with economic rationale
 - [[orchestrator-first-bootstrapping-reduces-multi-agent-coordination-failures]]
 
 ## Create
-(filled by create phase)
+Created: agents/lossless-context-transfer-at-handoff-boundaries-is-the-orchestrators-most-critical-responsibility.md
+Note title: "lossless context transfer at handoff boundaries is the orchestrator's most critical responsibility"
 
 ## Reflect
 (filled by reflect phase)
