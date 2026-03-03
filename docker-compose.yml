@@ -9,7 +9,10 @@ services:
       - POSTGRES_USER=temporal
       - POSTGRES_PWD=temporal
       - POSTGRES_SEEDS=postgres
+      - TEMPORAL_NAMESPACE=agentic-sdlc
       - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
+    volumes:
+      - ./infra/dynamicconfig:/etc/temporal/config/dynamicconfig
     depends_on:
       postgres:
         condition: service_healthy
